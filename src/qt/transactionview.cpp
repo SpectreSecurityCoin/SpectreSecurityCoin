@@ -40,7 +40,7 @@ TransactionView::TransactionView(QWidget *parent) :
 {
     QSettings settings;
     // Build filter row
-    setContentsMargins(15,15,15,15);
+    setContentsMargins(0,0,0,0);
 
     QHBoxLayout *hlayout = new QHBoxLayout();
     hlayout->setContentsMargins(0,0,0,0);
@@ -195,7 +195,7 @@ void TransactionView::setModel(WalletModel *model)
 
         transactionView->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         transactionView->setModel(transactionProxyModel);
-        transactionView->setAlternatingRowColors(false);
+        transactionView->setAlternatingRowColors(true);
         transactionView->setSelectionBehavior(QAbstractItemView::SelectRows);
         transactionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
         transactionView->setSortingEnabled(true);
