@@ -270,8 +270,8 @@ HEADERS += src/qt/bitcoingui.h \
     src/misc/threadsafety.h \
     src/misc/tinyformat.h \
     src/misc/stealth.h \
-    src/qt/flowlayout.h \
     src/qt/darksendconfig.h \
+    src/qt/flowlayout.h \
     src/masternode/masternode.h \
     src/darksend/darksend.h \
     src/darksend/darksend-relay.h \
@@ -398,8 +398,8 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/misc/pbkdf2.cpp \
     src/support/cleanse.cpp \
     src/misc/stealth.cpp \
-    src/qt/flowlayout.cpp \
     src/qt/darksendconfig.cpp \
+    src/qt/flowlayout.cpp \
     src/masternode/masternode.cpp \
     src/darksend/darksend.cpp \
     src/darksend/darksend-relay.cpp \
