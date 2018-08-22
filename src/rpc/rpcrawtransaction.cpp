@@ -48,31 +48,7 @@ void ScriptPubKeyToJSON(const CScript& scriptPubKey, Object& out, bool fIncludeH
         a.push_back(CSpectreSecurityCoinAddress(addr).ToString());
     out.push_back(Pair("addresses", a));
 }
-void spj(const CScript& scriptPubKey, Object& out, bool fIncludeHex)
-{
-    txnouttype type;
-    vector<CTxDestination> addresses;
-    int nRequired;
 
-    out.push_back(Pair("asm", scriptPubKey.ToString()));
-
-    if (fIncludeHex)
-        out.push_back(Pair("hex", HexStr(scriptPubKey.begin(), scriptPubKey.end())));
-
-    if (!ExtractDestinations(scriptPubKey, type, addresses, nRequired))
-    {
-        out.push_back(Pair("type", GetTxnOutputType(type)));
-        return;
-    }
-
-    out.push_back(Pair("reqSigs", nRequired));
-    out.push_back(Pair("type", GetTxnOutputType(type)));
-
-    Array a;
-    BOOST_FOREACH(const CTxDestination& addr, addresses)
-        a.push_back(CSpectreSecurityCoinAddress(addr).ToString());
-    out.push_back(Pair("addresses", a));
-}
 void TxToJSON(const CTransaction& tx, const uint256 hashBlock, Object& entry)
 {
     entry.push_back(Pair("txid", tx.GetHash().GetHex()));
@@ -106,7 +82,7 @@ void TxToJSON(const CTransaction& tx, const uint256 hashBlock, Object& entry)
         out.push_back(Pair("value", ValueFromAmount(txout.nValue)));
         out.push_back(Pair("n", (int64_t)i));
         Object o;
-        spj(txout.scriptPubKey, o, true);
+        ScriptPubKeyToJSON(txout.scriptPubKey, o, true);
         out.push_back(Pair("scriptPubKey", o));
         vout.push_back(out);
     }
@@ -363,7 +339,7 @@ Value decodescript(const Array& params, bool fHelp)
     } else {
         // Empty scripts are valid
     }
-    spj(script, r, false);
+    ScriptPubKeyToJSON(script, r, false);
 
     r.push_back(Pair("p2sh", CSpectreSecurityCoinAddress(script.GetID()).ToString()));
     return r;

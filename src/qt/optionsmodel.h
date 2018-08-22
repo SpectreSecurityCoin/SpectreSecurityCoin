@@ -7,6 +7,8 @@
 
 #include <QAbstractListModel>
 
+extern bool fUseBlackTheme;
+
 QT_BEGIN_NAMESPACE
 class QNetworkProxy;
 QT_END_NAMESPACE
@@ -38,6 +40,7 @@ public:
         DisplayUnit,            // BitcoinUnits::Unit
         Language,               // QString
         CoinControlFeatures,    // bool
+        UseBlackTheme,     // bool
         DarksendRounds,    // int
         AnonymizeSpectreSecurityCoinAmount, //int
         OptionIDRowCount,

@@ -18,11 +18,25 @@ pause(){
 # Ubuntu System Updater Function
 update_os(){
 	clear
-	echo " Updating Operating System"
+	echo " Updating Operating System..."
 	sudo apt-get update -qq
 	sudo apt-get upgrade -qq
 	sudo apt-get dist-upgrade -qq
 	sudo apt-get install g++-multilib libc6-dev-i386 p7zip-full autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip wget xz-utils libtool-bin ruby scons libtool libgdk-pixbuf2.0-dev dos2unix ntp -qq
+	sudo apt-get install git
+ 
+	echo " Installing Linux Daemon Building Tools..."
+	sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils -qq
+	sudo apt-get install libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev -qq
+	sudo apt-get install libboost-all-dev -qq
+	sudo apt-get install software-properties-common -qq
+	sudo add-apt-repository ppa:bitcoin/bitcoin -qq
+	sudo apt-get update -qq
+	sudo apt-get install libdb4.8-dev libdb4.8++-dev -qq
+	sudo apt-get install libminiupnpc-dev -qq
+	sudo apt-get install libzmq3-dev -qq
+	sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler -qq
+	sudo apt-get install libqt4-dev libprotobuf-dev protobuf-compiler -qq
 	echo " Finished Updating Operating System...."
 	echo " "
    pause
@@ -31,7 +45,7 @@ update_os(){
 # MXE Installer Function
 install_mxe(){
 	clear
-	echo "Installing MXE will take a while, you should make a sandwich or something...."
+	echo " Installing MXE will take a while, you should make a sandwich or something...."
 	cd /mnt
 	sudo git clone https://github.com/mxe/mxe.git && cd /mnt/mxe/src
 	sudo rm openssl.mk
@@ -41,7 +55,7 @@ install_mxe(){
 	sudo make MXE_TARGETS="i686-w64-mingw32.static" qttools
 	sudo make MXE_TARGETS="i686-w64-mingw32.static" boost
 	sudo make qt5 miniupnpc db boost -j4 MXE_PLUGIN_DIRS=$PWD/plugins/examples/qt5-freeze
-	echo "Installing MXE Install has finished..."
+	echo " Installing MXE Install has finished..."
 	echo " "
    pause
 }
@@ -49,30 +63,30 @@ install_mxe(){
 # MXE Updater Function
 update_mxe(){
 	clear
-	echo "Updating MXE will take a while, you should make a sandwich or something...."
+	echo " Updating MXE will take a while, you should make a sandwich or something...."
 	cd /mnt/mxe
 	sudo make update
-	echo "Check for Errors before continuing "
+	echo " Check for Errors before continuing "
     pause
 }
 
 # Get SpectreSecurityCoin Github Source Function
 get_spectrecoin(){
 	clear
-	echo "Cloning Spectre Security Coin Source from Master Branch..."
+	echo " Cloning Spectre Security Coin Source from Master Branch..."
 	cd /home/spectre/Desktop
 	git clone https://github.com/SpectreSecurityCoin/SpectreSecurityCoin.git
-	echo "Check for Errors before continuing "
+	echo " Check for Errors before continuing "
     pause
 }
 
 # Update SpectreSecurityCoin Github Source Function
 update_spectrecoin(){
 	clear
-	echo "Updating Spectre Security Coin Source from Master Branch..."
+	echo " Updating Spectre Security Coin Source from Master Branch..."
 	cd /home/spectre/Desktop/SpectreSecurityCoin
 	git pull
-	echo "Check for Errors before continuing "
+	echo " Check for Errors before continuing "
     pause
 }
 
@@ -82,7 +96,7 @@ install_3rdparty(){
 	clear
 
 	# Install Openssl
-	echo "Installing Openssl-1.0.2d"
+	echo " Installing Openssl-1.0.2d"
 	cd /home/spectre/Desktop/
 	wget https://media.spectresecurity.io/scripts/openssl-1.0.2d/openssl-1.0.2b.tar.gz
 	#wget https://www.openssl.org/source/old/1.1.0/openssl-1.1.0h.tar.gz
@@ -97,11 +111,11 @@ install_3rdparty(){
 	CROSS_COMPILE="i686-w64-mingw32.static-" ./Configure mingw no-asm no-shared --prefix=/mnt/mxe/usr/i686-w64-mingw32.static
 	sudo make depend
 	make -j4
-	echo "Check for Errors before continuing "
+	echo " Check for Errors before continuing "
 	pause
    
 	# Install Berkely DB
-	echo "Installing Db-4.8.30/"
+	echo " Installing Db-4.8.30/"
 	cd /home/spectre/Desktop/
 	wget https://media.spectresecurity.io/scripts/db-4.8.30/db-4.8.30.tar.gz
 	tar zxvf db-4.8.30.tar.gz
@@ -111,12 +125,12 @@ install_3rdparty(){
 	export PATH=/mnt/mxe/usr/bin:$PATH
 	export PATH=$MXEPATH/bin:$PATH
 	dos2unix berekeydb.sh
-	chmod ugo+x berekeydb.sh
-	sudo ./berekeydb.sh
-	echo "Check for Errors before continuing "
+	chmod ugo+x /home/spectre/Desktop/db-4.8.30/berekeydb.sh
+	sudo /home/spectre/Desktop/db-4.8.30/./berekeydb.sh
+	echo " Check for Errors before continuing "
 	pause
    
-	echo "All 3rdParty Software Installed"
+	echo " All 3rdParty Software Installed"
 	echo " "
 	pause
 	
@@ -147,6 +161,8 @@ windows_qt(){
 	make clean
 
 	cd src/leveldb
+	export PATH=/mnt/mxe/usr/bin:$PATH
+	export PATH=$MXEPATH/bin:$PATH
 	TARGET_OS=NATIVE_WINDOWS make -j4 CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ libleveldb.a libmemenv.a
 	cd ../..
 	chmod 775 * -R
@@ -161,6 +177,8 @@ windows_qt(){
 	make -j4
 	cd ../..
 	
+	export PATH=/mnt/mxe/usr/bin:$PATH
+	export PATH=$MXEPATH/bin:$PATH
 	/mnt/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake SpectreSecurityCoin.pro
 	make -j4
 	pause
@@ -198,6 +216,8 @@ linux_daemon(){
 	export PATH=/mnt/mxe/usr/bin:$PATH
 	export PATH=$MXEPATH/bin:$PATH
 	sudo ./compile-daemon.sh
+	cp src/SpectreSecurityCoind .
+	echo " Done Building Linux Daemon"
 	pause
 }
 
@@ -205,9 +225,13 @@ linux_daemon(){
 linux_qt(){
 	echo " Building Linux QT Wallet"
 	cd /home/spectre/Desktop/SpectreSecurityCoin
+	make clean
 	export PATH=/mnt/mxe/usr/bin:$PATH
 	export PATH=$MXEPATH/bin:$PATH
-	sudo ./compile-qt.sh
+	/usr/lib/x86_64-linux-gnu/qt5/bin/qmake linux3.pro
+	make -j4
+	#sudo ./compile-qt.sh
+	echo " Done Building Linux QT Wallet"
 	pause
 }
 

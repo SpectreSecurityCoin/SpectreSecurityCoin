@@ -142,7 +142,7 @@ public:
 #define ADDRMAN_NEW_BUCKETS_PER_ADDRESS 4
 
 // how many entries in a bucket with tried addresses are inspected, when selecting one to replace
-#define ADDRMAN_TRIED_ENTRIES_INXSPCT_ON_EVICT 4
+#define ADDRMAN_TRIED_ENTRIES_INSPECT_ON_EVICT 4
 
 // how old addresses can maximally be
 #define ADDRMAN_HORIZON_DAYS 30

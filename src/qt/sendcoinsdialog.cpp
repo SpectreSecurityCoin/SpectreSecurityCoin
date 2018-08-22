@@ -45,8 +45,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 
 #if QT_VERSION >= 0x040700
     /* Do not move this to the XML file, Qt before 4.7 will choke on it */
-    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a SpectreSecurityCoin address (e.g. SXZ1DpQPXqAq5pWGFjOgsAsxoSRM23cbNK)"));
-
+    ui->lineEditCoinControlChange->setPlaceholderText(tr("Enter a SpectreSecurityCoin address (e.g. SXZ1DpQPXqAq5pWGFjLgsAsxoSRM23cbNK)"));
 #endif
 
     addEntry();
@@ -55,7 +54,6 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     connect(ui->clearButton, SIGNAL(clicked()), this, SLOT(clear()));
 
     // Coin Control
-	    
     ui->lineEditCoinControlChange->setFont(GUIUtil::bitcoinAddressFont());
     connect(ui->pushButtonCoinControl, SIGNAL(clicked()), this, SLOT(coinControlButtonClicked()));
     connect(ui->checkBoxCoinControlChange, SIGNAL(stateChanged(int)), this, SLOT(coinControlChangeChecked(int)));
@@ -83,13 +81,12 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
         CoinControlDialog::coinControl->useInstantX = false;
     }
     else{
-	    
-	ui->checkUseDarksend->setChecked(useDarkSend);
+        ui->checkUseDarksend->setChecked(useDarkSend);
         ui->checkInstantX->setChecked(useInstantX);
         CoinControlDialog::coinControl->useDarkSend = useDarkSend;
         CoinControlDialog::coinControl->useInstantX = useInstantX;
     }
-	    
+
     connect(ui->checkUseDarksend, SIGNAL(stateChanged ( int )), this, SLOT(updateDisplayUnit()));
     connect(ui->checkInstantX, SIGNAL(stateChanged ( int )), this, SLOT(updateInstantX()));
 
@@ -286,7 +283,7 @@ void SendCoinsDialog::on_sendButton_clicked()
     QString strFunds = tr("using") + " <b>" + tr("anonymous funds") + "</b>";
     QString strFee = "";
     recipients[0].inputType = ONLY_DENOMINATED;
-	
+
     if(ui->checkUseDarksend->isChecked()) {
         recipients[0].inputType = ONLY_DENOMINATED;
         strFunds = tr("using") + " <b>" + tr("anonymous funds") + "</b>";
@@ -604,12 +601,13 @@ void SendCoinsDialog::setBalance(const CAmount& balance, const CAmount& stake, c
     {
         uint64_t bal = 0;
         QSettings settings;
-	settings.setValue("bUseDarkSend", ui->checkUseDarksend->isChecked());
+        settings.setValue("bUseDarkSend", ui->checkUseDarksend->isChecked());
         if(ui->checkUseDarksend->isChecked()) {
         bal = anonymizedBalance;
         } else {
         bal = balance;
-    }
+        }
+
         ui->labelBalance->setText(BitcoinUnits::formatWithUnit(model->getOptionsModel()->getDisplayUnit(), bal));
     }
 }
@@ -620,8 +618,8 @@ void SendCoinsDialog::updateDisplayUnit()
     if(!lockMain) return;
     setBalance(model->getBalance(), model->getStake(), model->getUnconfirmedBalance(), model->getImmatureBalance(), model->getAnonymizedBalance(),
     	model->getWatchBalance(), model->getWatchStake(), model->getWatchUnconfirmedBalance(), model->getWatchImmatureBalance());
-       CoinControlDialog::coinControl->useDarkSend = ui->checkUseDarksend->isChecked();
-       coinControlUpdateLabels();
+    CoinControlDialog::coinControl->useDarkSend = ui->checkUseDarksend->isChecked();
+    coinControlUpdateLabels();
 }
 
 void SendCoinsDialog::updateInstantX()
@@ -975,7 +973,7 @@ void SendCoinsDialog::coinControlUpdateLabels()
     }
 
     ui->checkUseDarksend->setChecked(CoinControlDialog::coinControl->useDarkSend);
-	
+
     if (CoinControlDialog::coinControl->HasSelected())
     {
         // actual coin control calculation

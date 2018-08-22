@@ -60,6 +60,7 @@ MasternodeManager::MasternodeManager(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->editButton->setEnabled(false);
     ui->startButton->setEnabled(false);
     ui->tableWidget_2->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
 
@@ -79,6 +80,7 @@ void MasternodeManager::on_tableWidget_2_itemSelectionChanged()
 {
     if(ui->tableWidget_2->selectedItems().count() > 0)
     {
+        ui->editButton->setEnabled(true);
         ui->startButton->setEnabled(true);
     }
 }

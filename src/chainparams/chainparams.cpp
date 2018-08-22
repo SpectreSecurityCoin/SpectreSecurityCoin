@@ -1,7 +1,7 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
 // Copyright (c) 2014-2015 Dash Developers
-// Copyright (c) 2017-2018 The Stipend developers
+// Copyright (c) 2017-2018 The Stip developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,6 +21,7 @@ struct SeedSpec6 {
 };
 
 #include "chainparamsseeds.h"
+
 //
 // Main network
 //
