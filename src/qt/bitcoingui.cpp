@@ -97,7 +97,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     prevBlocks(0),
     nWeight(0)
 {
-    setWindowTitle(tr("SpectreSecurityCoin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Spectre Security Coin") + " - " + tr("QT Wallet"));
 #ifndef Q_OS_MAC
     qApp->setWindowIcon(QIcon(":icons/bitcoin"));
     setWindowIcon(QIcon(":icons/bitcoin"));
@@ -106,7 +106,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
     setObjectName("SpectreSecurityCoin");
-    setStyleSheet("#SpectreSecurityCoin { background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 1.4, stop: 0 #dedede, stop: 1 #efefef);  }");
+    // setStyleSheet("#SpectreSecurityCoin { background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 1.4, stop: 0 #dedede, stop: 1 #efefef);}");
+    // Thi sets background color for full application
+    setStyleSheet("#SpectreSecurityCoin {background-color: #4c4a44}");
     // Accept D&D of URIs
     setAcceptDrops(true);
 
@@ -222,6 +224,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
         QString curStyle = qApp->style()->metaObject()->className();
         if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
         {
+            //progressBar->setStyleSheet("QProgressBar { color: #ffffff;background-color: #e8e8e8; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #423926, stop: 1 #2e240e); border-radius: 5px; margin: 0px; }");
             progressBar->setStyleSheet("QProgressBar { color: #ffffff;background-color: #e8e8e8; border: 1px solid grey; border-radius: 5px; padding: 1px; text-align: center; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #423926, stop: 1 #2e240e); border-radius: 5px; margin: 0px; }");
         }
     }
@@ -249,8 +252,9 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addPermanentWidget(totalAmountLabel);
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->setObjectName("statusBar");
+    //statusBar()->setStyleSheet("#statusBar { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #1c1c1c, stop: 1 #353535);  }");
+    // This sets the status bar style sheet
     statusBar()->setStyleSheet("#statusBar { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #1c1c1c, stop: 1 #353535);  }");
-
     syncIconMovie = new QMovie(fUseBlackTheme ? ":/movies/update_spinner_black" : ":/movies/update_spinner", "mng", this);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
@@ -467,7 +471,8 @@ void BitcoinGUI::createToolBars()
     toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     toolbar->setObjectName("tabs");
    // toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold;} QToolButton:hover { background-color: #423926 } QToolButton:checked { background-color: #423926 } QToolButton:pressed { background-color: #423926 } #tabs { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #353535, stop: 1 #1c1c1c);  }");
-    toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold;} QToolButton:hover { background-color: #423926 } QToolButton:checked { background-color: #423926 } QToolButton:pressed { background-color: #423926 } #tabs { color: #ffffff; background-color: #ec9600;  }");
+    // This sets the color for the whole left menu
+    toolbar->setStyleSheet("QToolButton { color: #ffffff; font-weight:bold;} QToolButton:hover { background-color: #ec9600;; } QToolButton:checked { background-color:#ec9600; } QToolButton:pressed { background-color: #ec9600; } #tabs { color: #ffffff; background-color: #ec9600;}");
 
     QLabel* header = new QLabel();
     header->setMinimumSize(142, 0);
