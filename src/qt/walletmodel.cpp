@@ -321,7 +321,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
         }
         // reject insane fee
         unsigned int insanefee = (transaction.getTransactionSize() == 0 ? nAddresses : transaction.getTransactionSize());
-        insanefee = ((MIN_RELAY_TX_FEE * insanefee) * 1000000);
+        insanefee = ((MIN_RELAY_TX_FEE * insanefee) * 10000);
         if (nFeeRequired > insanefee){
             LogPrintf("nFeeRequired: %d -- InsaneFee: %d\n", nFeeRequired, insanefee);
             return InsaneFee;
