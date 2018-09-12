@@ -56,7 +56,7 @@ void OptionsModel::Init()
         settings.setValue("nDisplayUnit", BitcoinUnits::BTC);
     nDisplayUnit = settings.value("nDisplayUnit").toInt();
 
-    fUseBlackTheme = settings.value("fUseBlackTheme", false).toBool();
+    fUseDefaultTheme = settings.value("fUseDefaultTheme", false).toBool();
 
     if (!settings.contains("fCoinControlFeatures"))
         settings.setValue("fCoinControlFeatures", false);
@@ -208,8 +208,8 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return QVariant(nDarksendRounds);
         case AnonymizeSpectreSecurityCoinAmount:
             return QVariant(nAnonymizeSpectreSecurityCoinAmount);
-        case UseBlackTheme:
-            return QVariant(fUseBlackTheme);
+        case UseDefaultTheme:
+            return QVariant(fUseDefaultTheme);
         default:
             return QVariant();
         }
@@ -309,9 +309,9 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
             settings.setValue("fCoinControlFeatures", fCoinControlFeatures);
             emit coinControlFeaturesChanged(fCoinControlFeatures);
             break;
-        case UseBlackTheme:
-            fUseBlackTheme = value.toBool();
-            settings.setValue("fUseBlackTheme", fUseBlackTheme);
+        case UseDefaultTheme:
+            fUseDefaultTheme = value.toBool();
+            settings.setValue("fUseDefaultTheme", fUseDefaultTheme);
             break;
         case DarksendRounds:
             nDarksendRounds = value.toInt();
