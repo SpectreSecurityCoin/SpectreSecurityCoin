@@ -416,8 +416,14 @@
           <string>Whether to show coin control features or not.</string>
          </property>
          <property name="text">
-          <string>Display coin &amp;control features</string>
+          <string>Display coin &amp;control features (experts only!)</string>
          </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="useDefaultTheme">
+         <property name="text">
+          <string>Use default visual theme (requires restart)</string>         </property>
         </widget>
        </item>
        <item>
