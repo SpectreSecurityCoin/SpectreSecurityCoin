@@ -18,7 +18,7 @@
 #include <QSettings>
 #include <QStringList>
 
-bool fUseBlackTheme;
+bool fUseDefaultTheme;
 
 OptionsModel::OptionsModel(QObject *parent) :
     QAbstractListModel(parent)
