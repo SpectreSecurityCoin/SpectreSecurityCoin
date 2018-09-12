@@ -60,8 +60,8 @@ public:
             foreground = qvariant_cast<QColor>(value);
         }
 
-        //painter->setPen(fUseBlackTheme ? QColor(255, 255, 255) : foreground);
-        painter->setPen(fUseBlackTheme ? QColor(254, 254, 254) : foreground);
+        //painter->setPen(fUseDefaultTheme ? QColor(255, 255, 255) : foreground);
+        painter->setPen(fUseDefaultTheme ? QColor(254, 254, 254) : foreground);
         QRect boundingRect;
         painter->drawText(addressRect, Qt::AlignLeft|Qt::AlignVCenter, address, &boundingRect);
 
@@ -84,7 +84,7 @@ public:
         {
             foreground = option.palette.color(QPalette::Text);
         }
-        painter->setPen(fUseBlackTheme ? QColor(255, 255, 255) : foreground);
+        painter->setPen(fUseDefaultTheme ? QColor(255, 255, 255) : foreground);
 
 
         QString amountText = BitcoinUnits::formatWithUnit(unit, amount, true);
@@ -94,7 +94,7 @@ public:
         }
         painter->drawText(amountRect, Qt::AlignRight|Qt::AlignVCenter, amountText);
 
-        painter->setPen(fUseBlackTheme ? QColor(96, 101, 110) : option.palette.color(QPalette::Text));
+        painter->setPen(fUseDefaultTheme ? QColor(96, 101, 110) : option.palette.color(QPalette::Text));
         painter->drawText(amountRect, Qt::AlignLeft|Qt::AlignVCenter, GUIUtil::dateTimeStr(date));
 
         painter->restore();
@@ -166,7 +166,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
 
-    if (fUseBlackTheme)
+    if (fUseDefaultTheme)
     {
         const char* whiteLabelQSS = "QLabel { color: rgb(255,255,255); }";
         ui->labelBalance->setStyleSheet(whiteLabelQSS);
