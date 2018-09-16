@@ -752,7 +752,7 @@ void SetDefaultThemeQSS(QApplication& app)
                       "QProgressBar::chunk { background: rgb(222,222,222); }"
                       "QTreeView::item { background: rgb(255, 165, 0); rgb(255, 165, 0); }"
                       "QTreeView::item:selected { background-color: rgb(255, 165, 0); }"
-                      "QTableView     { background: rgb(213, 218, 221); rgb(255, 165, 0); gridline-color: rgb(255, 165, 0); }"
+                      "QTableView     { background: rgb(255, 165, 0); color: rgb(255, 165, 0); gridline-color: rgb(255, 165, 0); }"
                       "QHeaderView::section { background: rgb(255, 165, 0); color: rgb(255, 165, 0); }"
                       "QToolBar       { background: rgb(255, 165, 0); border: none; }");
 }
