@@ -1441,7 +1441,12 @@ static CBigNum GetProofOfStakeLimit(int nHeight)
 {
     return bnProofOfStakeLimit;
 }
+bool supplyreached() {
+    if (!pindexBest)
+        return false;
 
+    return pindexBest->nMoneySupply >= MAX_MONEY;
+}
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 {
@@ -1470,6 +1475,9 @@ int64_t GetProofOfWorkReward(int nHeight, int64_t nFees)
 // miner's coin stake reward
 int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, int64_t nFees)
 {
+      if (supplyreached()) {
+      return nFees;
+}
     int64_t nSubsidy = 0;
 
     if (pindexBest->nHeight+1 > 500 && pindexBest->nHeight+1 <= 827778)  {
