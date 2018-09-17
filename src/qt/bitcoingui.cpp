@@ -149,6 +149,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     messagePage = new MessagePage(this);
 
     centralStackedWidget = new QStackedWidget(this);
+    transactionsPage->setStyleSheet("QTableView        { background: rgb(255,255,255); }");
     centralStackedWidget->setContentsMargins(0, 0, 0, 0);
     centralStackedWidget->addWidget(overviewPage);
     centralStackedWidget->addWidget(transactionsPage);
