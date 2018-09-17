@@ -656,7 +656,8 @@ background-color: rgb(53, 53, 53);</string>
              <string>Try to manually submit a Darksend request.</string>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(236, 150, 0);</string>
+             <string notr="true">background-color: rgb(41, 44, 48);
+color: rgb(236, 150, 0);</string>
             </property>
             <property name="text">
              <string>Try Mix</string>
@@ -672,7 +673,8 @@ background-color: rgb(53, 53, 53);</string>
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(236, 150, 0);</string>
+             <string notr="true">background-color: rgb(41, 44, 48);
+color: rgb(236, 150, 0);</string>
             </property>
             <property name="text">
              <string>Start/Stop Mixing</string>
@@ -694,7 +696,8 @@ background-color: rgb(53, 53, 53);</string>
              <bool>false</bool>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(236, 150, 0);</string>
+             <string notr="true">background-color: rgb(41, 44, 48);
+color: rgb(236, 150, 0);</string>
             </property>
             <property name="text">
              <string>Reset</string>
