@@ -19,6 +19,9 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
      </property>
@@ -59,7 +62,12 @@
           </widget>
          </item>
          <item>
-          <widget class="BitcoinAmountField" name="transactionFee"/>
+          <widget class="BitcoinAmountField" name="transactionFee">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+          </widget>
          </item>
          <item>
           <spacer name="horizontalSpacerFee">
@@ -105,7 +113,12 @@
           </widget>
          </item>
          <item>
-          <widget class="BitcoinAmountField" name="reserveBalance"/>
+          <widget class="BitcoinAmountField" name="reserveBalance">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
+          </widget>
          </item>
          <item>
           <spacer name="horizontalSpacerReserveBalance">
@@ -126,6 +139,9 @@
         <widget class="QCheckBox" name="bitcoinAtStartup">
          <property name="toolTip">
           <string>Automatically start SpectreSecurityCoin after logging in to the system.</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
           <string>&amp;Start SpectreSecurityCoin on system login</string>
@@ -157,6 +173,10 @@
        </item>
        <item row="6" column="1">
         <widget class="QSpinBox" name="darksendRounds">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+         </property>
          <property name="minimum">
           <number>2</number>
          </property>
@@ -192,6 +212,10 @@
        </item>
        <item row="7" column="1">
         <widget class="QSpinBox" name="anonymizeSpectreSecurityCoin">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+         </property>
          <property name="minimum">
           <number>2</number>
          </property>
@@ -258,6 +282,10 @@
            </property>
            <property name="toolTip">
             <string>IP address of the proxy (e.g. 127.0.0.1)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
            </property>
           </widget>
          </item>
@@ -423,7 +451,8 @@
        <item>
         <widget class="QCheckBox" name="useDefaultTheme">
          <property name="text">
-          <string>Use default visual theme (requires restart)</string>         </property>
+          <string>Use default visual theme (requires restart)</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -523,8 +552,13 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>QValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qvalidatedlineedit.h</header>
+  </customwidget>
+  <customwidget>
    <class>BitcoinAmountField</class>
-   <extends>QSpinBox</extends>
+   <extends>QLineEdit</extends>
    <header>bitcoinamountfield.h</header>
    <container>1</container>
   </customwidget>
@@ -532,11 +566,6 @@
    <class>QValueComboBox</class>
    <extends>QComboBox</extends>
    <header>qvaluecombobox.h</header>
-  </customwidget>
-  <customwidget>
-   <class>QValidatedLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>qvalidatedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

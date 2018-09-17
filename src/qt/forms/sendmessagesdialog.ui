@@ -60,7 +60,12 @@
          <number>1</number>
         </property>
         <item>
-         <widget class="QValidatedLineEdit" name="addressFrom"/>
+         <widget class="QValidatedLineEdit" name="addressFrom">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="addressBookButton">
@@ -112,7 +117,7 @@
         <x>0</x>
         <y>0</y>
         <width>830</width>
-        <height>298</height>
+        <height>291</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">

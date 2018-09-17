@@ -42,6 +42,10 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QFrame" name="frame">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(53, 53, 53);</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -456,6 +460,10 @@
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(53, 53, 53);</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -541,6 +549,9 @@
                 <width>154</width>
                 <height>16777215</height>
                </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(255, 255, 255);</string>
               </property>
               <property name="value">
                <number>0</number>
@@ -644,6 +655,9 @@
             <property name="toolTip">
              <string>Try to manually submit a Darksend request.</string>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(236, 150, 0);</string>
+            </property>
             <property name="text">
              <string>Try Mix</string>
             </property>
@@ -656,6 +670,9 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(236, 150, 0);</string>
             </property>
             <property name="text">
              <string>Start/Stop Mixing</string>
@@ -675,6 +692,9 @@
             </property>
             <property name="autoFillBackground">
              <bool>false</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(236, 150, 0);</string>
             </property>
             <property name="text">
              <string>Reset</string>
@@ -706,6 +726,10 @@
       <layout class="QVBoxLayout" name="verticalLayout_3">
        <item>
         <widget class="QFrame" name="frame_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(53, 53, 53);
+color:rgb(255, 255, 255)</string>
+         </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
          </property>
@@ -765,7 +789,8 @@
           <item>
            <widget class="QListView" name="listTransactions">
             <property name="styleSheet">
-             <string notr="true">QListView { background: transparent; }</string>
+             <string notr="true">QListView { background: transparent; }
+color: rgb(255, 255, 255);</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>

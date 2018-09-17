@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>457</width>
-    <height>126</height>
+    <height>143</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Edit Address</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
@@ -30,6 +33,10 @@
       <widget class="QLineEdit" name="labelEdit">
        <property name="toolTip">
         <string>The label associated with this address book entry</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
        </property>
       </widget>
      </item>
@@ -51,6 +58,10 @@
       <widget class="QLineEdit" name="addressEdit">
        <property name="toolTip">
         <string>The address associated with this address book entry. This can only be modified for sending addresses.</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
        </property>
       </widget>
      </item>
@@ -75,6 +86,9 @@
    </item>
    <item row="2" column="0">
     <widget class="QCheckBox" name="stealthCB">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
      <property name="text">
       <string>&amp;Stealth Address</string>
      </property>

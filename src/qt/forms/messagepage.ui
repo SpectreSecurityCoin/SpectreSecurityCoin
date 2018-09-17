@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Address Book</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="labelExplanation">
@@ -34,6 +37,10 @@
      </property>
      <property name="toolTip">
       <string>Click on a message to view it</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
      </property>
      <property name="tabKeyNavigation">
       <bool>false</bool>
@@ -123,7 +130,9 @@
         <item>
          <widget class="QListView" name="listConversation">
           <property name="styleSheet">
-           <string notr="true">#listConversation { color: #000000; }</string>
+           <string notr="true">#listConversation {color: rgb(0, 0, 0);
+background-color: rgb(255, 255, 255);  }
+</string>
           </property>
          </widget>
         </item>

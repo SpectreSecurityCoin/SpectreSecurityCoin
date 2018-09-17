@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);</string>
+  </property>
   <property name="frameShape">
    <enum>QFrame::StyledPanel</enum>
   </property>
@@ -39,6 +42,10 @@
       <widget class="QValidatedLineEdit" name="sendTo">
        <property name="toolTip">
         <string>The address to send the payment to  (e.g. SXZ1DpQPXqAq5pWGFjLgsAsxoSRM23cbNK)</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
        </property>
        <property name="maxLength">
         <number>34</number>
@@ -86,6 +93,10 @@
        </property>
        <property name="toolTip">
         <string>Enter a label for this address to add it to your address book</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
        </property>
       </widget>
      </item>
@@ -135,7 +146,12 @@
    <item row="2" column="1">
     <layout class="QHBoxLayout" name="horizontalLayout_6">
      <item>
-      <widget class="QValidatedLineEdit" name="publicKey"/>
+      <widget class="QValidatedLineEdit" name="publicKey">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QToolButton" name="PubkeyPasteButton">
@@ -176,6 +192,10 @@
      </property>
      <property name="focusPolicy">
       <enum>Qt::WheelFocus</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
      </property>
      <property name="tabChangesFocus">
       <bool>false</bool>

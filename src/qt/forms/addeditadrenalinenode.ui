@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Add/Edit SpectreSecurityCoin Node</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">color: rgb(255, 255, 255);</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -46,7 +49,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="aliasLineEdit"/>
+      <widget class="QLineEdit" name="aliasLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -63,7 +71,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="addressLineEdit"/>
+      <widget class="QLineEdit" name="addressLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -80,7 +93,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="privkeyLineEdit"/>
+      <widget class="QLineEdit" name="privkeyLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -97,7 +115,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="txhashLineEdit"/>
+      <widget class="QLineEdit" name="txhashLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -114,7 +137,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="outputindexLineEdit"/>
+      <widget class="QLineEdit" name="outputindexLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -131,7 +159,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="donationaddressLineEdit"/>
+      <widget class="QLineEdit" name="donationaddressLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -148,7 +181,12 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="donationpercentageLineEdit"/>
+      <widget class="QLineEdit" name="donationpercentageLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>

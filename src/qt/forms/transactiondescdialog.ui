@@ -19,6 +19,10 @@
      <property name="toolTip">
       <string>This pane shows a detailed description of the transaction</string>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
      <property name="readOnly">
       <bool>true</bool>
      </property>

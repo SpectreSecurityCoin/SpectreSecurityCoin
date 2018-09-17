@@ -26,7 +26,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #eaeaea
+   <string notr="true">background-color: #292c30
 </string>
   </property>
   <layout class="QVBoxLayout" name="topLayout">
@@ -84,7 +84,7 @@
           </property>
           <property name="styleSheet">
            <string notr="true">#frame_10 {
-    background-color: #fff;
+    background-color: #353535;
     border: 1px solid black;
 }</string>
           </property>
@@ -172,25 +172,17 @@
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">padding-top: 10px;
-padding-left: 2px;
-background-color: #fff</string>
+                     <string notr="true">background-color: rgb(53, 53, 53);
+color: rgb(255, 255, 255);</string>
                     </property>
                     <property name="text">
-                     <string>Masternodes</string>
+                     <string>SpectreSecurityCoin Masternode Dashboard</string>
                     </property>
                    </widget>
                   </item>
                  </layout>
                 </item>
                </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="Line" name="line_4">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
               </widget>
              </item>
             </layout>
@@ -210,6 +202,7 @@ background-color: #fff</string>
            <string notr="true">#frame_7 {
     background-color: #fff;
     border: 1px solid black;
+	background-color: rgb(53, 53, 53);
 }</string>
           </property>
           <property name="frameShape">
@@ -322,7 +315,7 @@ background-color: #fff</string>
          <widget class="QFrame" name="frame_2">
           <property name="styleSheet">
            <string notr="true">#frame_2 {
-    background-color: #fff;
+    background-color: #353535;
     border: 1px solid black;
 }</string>
           </property>

@@ -574,7 +574,7 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         }
         if(index.column() == Amount && rec->type != TransactionRecord::Generated && (rec->credit+rec->debit) > 0)
         {
-            return fUseDefaultTheme ? COLOR_POSITIVE : COLOR_POSITIVE;
+            return fUseDefaultTheme ? COLOR_NEGATIVE : COLOR_POSITIVE;
         }
         if(index.column() == ToAddress)
         {
