@@ -792,8 +792,7 @@ color:rgb(255, 255, 255)</string>
           <item>
            <widget class="QListView" name="listTransactions">
             <property name="styleSheet">
-             <string notr="true">QListView { background: transparent; }
-color: rgb(255, 255, 255);</string>
+             <string notr="true">QListView { background: transparent; color:rgb(255, 255, 255);}</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
