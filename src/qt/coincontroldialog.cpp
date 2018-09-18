@@ -44,8 +44,8 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     QAction *copyLabelAction = new QAction(tr("Copy label"), this);
     QAction *copyAmountAction = new QAction(tr("Copy amount"), this);
              copyTransactionHashAction = new QAction(tr("Copy transaction ID"), this);  // we need to enable/disable this
-             //lockAction = new QAction(tr("Lock unspent"), this);                        // we need to enable/disable this
-             //unlockAction = new QAction(tr("Unlock unspent"), this);                    // we need to enable/disable this
+             lockAction = new QAction(tr("Lock unspent"), this);                        // we need to enable/disable this
+             unlockAction = new QAction(tr("Unlock unspent"), this);                    // we need to enable/disable this
 
     // context menu
     contextMenu = new QMenu();
@@ -53,9 +53,9 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     contextMenu->addAction(copyLabelAction);
     contextMenu->addAction(copyAmountAction);
     contextMenu->addAction(copyTransactionHashAction);
-    //contextMenu->addSeparator();
-    //contextMenu->addAction(lockAction);
-    //contextMenu->addAction(unlockAction);
+    contextMenu->addSeparator();
+    contextMenu->addAction(lockAction);
+    contextMenu->addAction(unlockAction);
 
     // context menu signals
     connect(ui->treeWidget, SIGNAL(customContextMenuRequested(QPoint)), this, SLOT(showMenu(QPoint)));
@@ -63,8 +63,8 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
     connect(copyLabelAction, SIGNAL(triggered()), this, SLOT(copyLabel()));
     connect(copyAmountAction, SIGNAL(triggered()), this, SLOT(copyAmount()));
     connect(copyTransactionHashAction, SIGNAL(triggered()), this, SLOT(copyTransactionHash()));
-    //connect(lockAction, SIGNAL(triggered()), this, SLOT(lockCoin()));
-    //connect(unlockAction, SIGNAL(triggered()), this, SLOT(unlockCoin()));
+    connect(lockAction, SIGNAL(triggered()), this, SLOT(lockCoin()));
+    connect(unlockAction, SIGNAL(triggered()), this, SLOT(unlockCoin()));
 
     // clipboard actions
     QAction *clipboardQuantityAction = new QAction(tr("Copy quantity"), this);
@@ -226,7 +226,7 @@ void CoinControlDialog::buttonToggleLockClicked()
     else{
         QMessageBox msgBox;
         msgBox.setObjectName("lockMessageBox");
-        msgBox.setStyleSheet(GUIUtil::loadStyleSheet());
+        //msgBox.setStyleSheet(GUIUtil::loadStyleSheet());
         msgBox.setText(tr("Please switch to \"List mode\" to use this function."));
         msgBox.exec();
     }
@@ -244,22 +244,22 @@ void CoinControlDialog::showMenu(const QPoint &point)
         if (item->text(COLUMN_TXHASH).length() == 64) // transaction hash is 64 characters (this means its a child node, so its not a parent node in tree mode)
         {
             copyTransactionHashAction->setEnabled(true);
-            //if (model->isLockedCoin(uint256(item->text(COLUMN_TXHASH).toStdString()), item->text(COLUMN_VOUT_INDEX).toUInt()))
-            //{
-            //    lockAction->setEnabled(false);
-            //    unlockAction->setEnabled(true);
-            //}
-            //else
-            //{
-            //    lockAction->setEnabled(true);
-            //    unlockAction->setEnabled(false);
-            //}
+            if (model->isLockedCoin(uint256(item->text(COLUMN_TXHASH).toStdString()), item->text(COLUMN_VOUT_INDEX).toUInt()))
+            {
+                lockAction->setEnabled(false);
+                unlockAction->setEnabled(true);
+            }
+            else
+            {
+                lockAction->setEnabled(true);
+                unlockAction->setEnabled(false);
+            }
         }
         else // this means click on parent node in tree mode -> disable all
         {
             copyTransactionHashAction->setEnabled(false);
-            //lockAction->setEnabled(false);
-            //unlockAction->setEnabled(false);
+            lockAction->setEnabled(false);
+            unlockAction->setEnabled(false);
         }
 
         // show context menu
@@ -843,13 +843,13 @@ void CoinControlDialog::updateView()
             itemOutput->setText(COLUMN_VOUT_INDEX, QString::number(out.i));
 
             // disable locked coins
-            /*if (model->isLockedCoin(txhash, out.i))
+            if (model->isLockedCoin(txhash, out.i))
             {
                 COutPoint outpt(txhash, out.i);
                 coinControl->UnSelect(outpt); // just to be sure
                 itemOutput->setDisabled(true);
                 itemOutput->setIcon(COLUMN_CHECKBOX, QIcon(":/icons/lock_closed"));
-            }*/
+            }
 
             // set checkbox
             if (coinControl->IsSelected(txhash, out.i))
