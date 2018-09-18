@@ -99,8 +99,8 @@ private slots:
     void copyLabel();
     void copyAddress();
     void copyTransactionHash();
-    //void lockCoin();
-    //void unlockCoin();
+    void lockCoin();
+    void unlockCoin();
     void clipboardQuantity();
     void clipboardAmount();
     void clipboardFee();
