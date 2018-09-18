@@ -429,7 +429,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QRadioButton" name="radioListMode">
+       <widget class="QRadioButton" name="radioListMode">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -441,6 +441,13 @@
          </property>
         </widget>
        </item>
+        <item>
+         <widget class="QLabel" name="labelLocked">
+          <property name="text">
+           <string>(1 locked)</string>
+          </property>
+         </widget>
+        </item>
        <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
@@ -459,7 +466,7 @@
     </widget>
    </item>
    <item>
-    <widget class="CoinControlTreeWidget" name="treeWidget">
+     <widget class="CoinControlTreeWidget" name="treeWidget">
      <property name="contextMenuPolicy">
       <enum>Qt::CustomContextMenu</enum>
      </property>
