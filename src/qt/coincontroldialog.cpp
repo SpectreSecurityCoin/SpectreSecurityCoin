@@ -115,7 +115,8 @@ CoinControlDialog::CoinControlDialog(QWidget *parent) :
 
     // (un)select all
     connect(ui->pushButtonSelectAll, SIGNAL(clicked()), this, SLOT(buttonSelectAllClicked()));
-
+        // toggle the lock state
+    connect(ui->pushButtonToggleLock, SIGNAL(clicked()), this, SLOT(buttonToggleLockClicked()));
     // change coin control first column label due Qt4 bug.
     // see https://github.com/bitcoin/bitcoin/issues/5716
     ui->treeWidget->headerItem()->setText(COLUMN_CHECKBOX, QString());
@@ -197,7 +198,7 @@ void CoinControlDialog::buttonSelectAllClicked()
     LogPrintf("CoinControlDialog::buttonSelectAllClicked(CoinControlDialog::updateLabels) - Time elapsed: %f \n", t);
 }
 
-/* Toggle lock state
+ Toggle lock state
 void CoinControlDialog::buttonToggleLockClicked()
 {
     QTreeWidgetItem *item;
@@ -230,7 +231,6 @@ void CoinControlDialog::buttonToggleLockClicked()
         msgBox.exec();
     }
 }
-*/
 
 // context menu
 void CoinControlDialog::showMenu(const QPoint &point)
