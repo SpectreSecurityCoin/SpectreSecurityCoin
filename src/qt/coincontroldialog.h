@@ -116,8 +116,8 @@ private slots:
     void headerSectionClicked(int);
     void buttonBoxClicked(QAbstractButton*);
     void buttonSelectAllClicked();
-    //void updateLabelLocked();
-    //void buttonToggleLockClicked();
+    void updateLabelLocked();
+    void buttonToggleLockClicked();
 };
 
 #endif // COINCONTROLDIALOG_H
