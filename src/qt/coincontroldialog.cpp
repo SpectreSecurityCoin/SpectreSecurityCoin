@@ -198,7 +198,7 @@ void CoinControlDialog::buttonSelectAllClicked()
     LogPrintf("CoinControlDialog::buttonSelectAllClicked(CoinControlDialog::updateLabels) - Time elapsed: %f \n", t);
 }
 
- Toggle lock state
+ //Toggle lock state
 void CoinControlDialog::buttonToggleLockClicked()
 {
     QTreeWidgetItem *item;
