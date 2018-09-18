@@ -44,8 +44,8 @@ private:
     QMenu *contextMenu;
     QTreeWidgetItem *contextMenuItem;
     QAction *copyTransactionHashAction;
-    //QAction *lockAction;
-    //QAction *unlockAction;
+    QAction *lockAction;
+    QAction *unlockAction;
 
     QString strPad(QString, int, QString);
     void sortView(int, Qt::SortOrder);
