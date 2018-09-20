@@ -46,7 +46,7 @@
        <item>
         <widget class="QFrame" name="frame">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(236, 150, 0);
 background-color: rgb(53, 53, 53);</string>
          </property>
          <property name="frameShape">
@@ -65,6 +65,9 @@ background-color: rgb(53, 53, 53);</string>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
                <string>Balances</string>
@@ -181,6 +184,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="0" column="0">
              <widget class="QLabel" name="labelBalanceText">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Available:</string>
               </property>
@@ -213,6 +219,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="3" column="0">
              <widget class="QLabel" name="labelImmatureText">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Immature:</string>
               </property>
@@ -347,6 +356,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="1" column="0">
              <widget class="QLabel" name="label_10">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Stake:</string>
               </property>
@@ -354,6 +366,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="2" column="0">
              <widget class="QLabel" name="labelPendingText">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Pending:</string>
               </property>
@@ -386,6 +401,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="5" column="0">
              <widget class="QLabel" name="labelTotalText">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Total:</string>
               </property>
@@ -464,7 +482,7 @@ background-color: rgb(53, 53, 53);</string>
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(236, 150, 0);
 background-color: rgb(53, 53, 53);</string>
          </property>
          <property name="frameShape">
@@ -483,6 +501,9 @@ background-color: rgb(53, 53, 53);</string>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
                <string>Darksend</string>
@@ -533,6 +554,9 @@ background-color: rgb(53, 53, 53);</string>
             </property>
             <item row="0" column="0">
              <widget class="QLabel" name="label_6">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Status:</string>
               </property>
@@ -540,6 +564,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="1" column="0">
              <widget class="QLabel" name="label_7">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Completion:</string>
               </property>
@@ -563,6 +590,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="3" column="0">
              <widget class="QLabel" name="labelAnonymizedText">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Darksend Balance:</string>
               </property>
@@ -583,6 +613,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="4" column="0">
              <widget class="QLabel" name="label_8">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Amount and Rounds:</string>
               </property>
@@ -597,6 +630,9 @@ background-color: rgb(53, 53, 53);</string>
             </item>
             <item row="5" column="0">
              <widget class="QLabel" name="label_9">
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
               <property name="text">
                <string>Submitted Denom:</string>
               </property>
@@ -734,7 +770,7 @@ color: rgb(236, 150, 0);</string>
         <widget class="QFrame" name="frame_2">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(53, 53, 53);
-color:rgb(255, 255, 255)</string>
+color: rgb(236, 150, 0);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -752,6 +788,9 @@ color:rgb(255, 255, 255)</string>
                 <weight>75</weight>
                 <bold>true</bold>
                </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
               </property>
               <property name="text">
                <string>Recent transactions</string>
@@ -795,7 +834,7 @@ color:rgb(255, 255, 255)</string>
           <item>
            <widget class="QListView" name="listTransactions">
             <property name="styleSheet">
-             <string notr="true">QListView { background: transparent; color:rgb(255, 255, 255);}</string>
+             <string notr="true">QListView { background: transparent;color: rgb(236, 150, 0);}</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>

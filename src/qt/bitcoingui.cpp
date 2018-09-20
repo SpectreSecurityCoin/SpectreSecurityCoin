@@ -457,7 +457,7 @@ static QWidget* makeToolBarSpacer()
 {
     QWidget* spacer = new QWidget();
     spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    spacer->setStyleSheet("QWidget { background: none; }");
+    spacer->setStyleSheet("QWidget { background: rgb(255, 165, 0); }");
     return spacer;
 }
 
