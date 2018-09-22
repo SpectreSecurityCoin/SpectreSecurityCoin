@@ -26,12 +26,12 @@ public:
     QList<SendCoinsRecipient> getRecipients();
 
     CWalletTx *getTransaction();
-    unsigned int getTransactionSize();
+    uint64_t getTransactionSize();
 
     void setTransactionFee(const CAmount& newFee);
-    CAmount getTransactionFee();
+    int64_t getTransactionFee();
 
-    CAmount getTotalTransactionAmount();
+    int64_t getTotalTransactionAmount();
 
     void newPossibleKeyChange(CWallet *wallet);
     CReserveKey *getPossibleKeyChange();
