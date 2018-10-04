@@ -14,7 +14,9 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color:rgb(51, 51, 51);
+color: rgb(255, 255, 255);
+border-radius:3px;</string>
   </property>
   <property name="frameShape">
    <enum>QFrame::StyledPanel</enum>
@@ -46,6 +48,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QToolButton" name="pasteTransactionIdButton">
        <property name="toolTip">
         <string/>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">padding-left:5px;</string>
        </property>
        <property name="text">
         <string/>
@@ -138,6 +143,9 @@ color: rgb(0, 0, 0);</string>
        <property name="toolTip">
         <string/>
        </property>
+       <property name="styleSheet">
+        <string notr="true">padding-left:5px;</string>
+       </property>
        <property name="text">
         <string/>
        </property>
@@ -153,7 +161,12 @@ color: rgb(0, 0, 0);</string>
     </layout>
    </item>
    <item row="2" column="1">
-    <widget class="QComboBox" name="transactionOutput"/>
+    <widget class="QComboBox" name="transactionOutput">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -38,15 +38,6 @@
    <property name="sizeConstraint">
     <enum>QLayout::SetMaximumSize</enum>
    </property>
-   <property name="leftMargin">
-    <number>21</number>
-   </property>
-   <property name="topMargin">
-    <number>21</number>
-   </property>
-   <property name="rightMargin">
-    <number>10</number>
-   </property>
    <item row="1" column="0">
     <widget class="QWidget" name="widget" native="true">
      <property name="sizePolicy">
@@ -56,8 +47,9 @@
       </sizepolicy>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(53, 53, 53);
-color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color:rgb(28, 28, 28);
+color: rgb(255, 255, 255);
+border-radius:3px;</string>
      </property>
      <layout class="QGridLayout" name="gridLayout">
       <item row="0" column="0">
@@ -73,7 +65,7 @@ color: rgb(255, 255, 255);</string>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:20px; font-weight:600; color:#ffffff;&quot;&gt;Block Explorer &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -113,7 +105,8 @@ color: rgb(255, 255, 255);</string>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:2px 0px;</string>
           </property>
           <property name="inputMask">
            <string comment="Transaction id" extracomment="Transaction id"/>
@@ -174,6 +167,16 @@ color: rgb(0, 0, 0);</string>
         </item>
         <item row="12" column="1">
          <widget class="QPushButton" name="txButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 165, 0); 
+padding:2px 0px;
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+          </property>
           <property name="text">
            <string>Decode Transaction</string>
           </property>
@@ -188,6 +191,16 @@ color: rgb(0, 0, 0);</string>
         </item>
         <item row="1" column="1">
          <widget class="QPushButton" name="blockButton">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 165, 0); 
+padding:2px 0px;
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+          </property>
           <property name="text">
            <string>Jump to Block</string>
           </property>
@@ -220,7 +233,8 @@ color: rgb(0, 0, 0);</string>
           </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:2px 0px;</string>
           </property>
           <property name="maximum">
            <number>99999999</number>

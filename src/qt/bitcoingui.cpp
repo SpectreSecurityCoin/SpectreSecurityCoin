@@ -107,7 +107,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 #endif
     setObjectName("SpectreSecurityCoin");
     // This sets background color for full application
-    setStyleSheet("#SpectreSecurityCoin { background-color:rgb(166, 166, 166);}");
+    setStyleSheet("#SpectreSecurityCoin {}");
 
     // Accept D&D of URIs
     setAcceptDrops(true);
@@ -149,7 +149,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     messagePage = new MessagePage(this);
 
     centralStackedWidget = new QStackedWidget(this);
-    transactionsPage->setStyleSheet("QTableView        { background: rgb(255,255,255); }");
+    transactionsPage->setStyleSheet("QTableView        { }");
     centralStackedWidget->setContentsMargins(0, 0, 0, 0);
     centralStackedWidget->addWidget(overviewPage);
     centralStackedWidget->addWidget(transactionsPage);
@@ -178,7 +178,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     QWidget *frameBlocks = new QWidget();
     frameBlocks->setContentsMargins(0,0,0,0);
     frameBlocks->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
-    frameBlocks->setStyleSheet("QWidget { background: none; margin-bottom: 5px; }");
+    frameBlocks->setStyleSheet("QWidget { background-color:rgb(28, 28, 28);border:0px; }");
     QHBoxLayout *frameBlocksLayout = new QHBoxLayout(frameBlocks);
     frameBlocksLayout->setContentsMargins(3,0,3,0);
     frameBlocksLayout->setSpacing(3);
@@ -225,7 +225,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
         QString curStyle = qApp->style()->metaObject()->className();
         if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
         {
-            progressBar->setStyleSheet("QProgressBar { color: #ffffff;background-color: #e8e8e8; text-align: center;border:none; } QProgressBar::chunk { background: QLinearGradient(x1: 0, y1: 0, x2: 1, y2: 0, stop: 0 #423926, stop: 1 #2e240e); border-radius: 5px; margin: 0px; }");
+            progressBar->setStyleSheet("QProgressBar { } QProgressBar::chunk {  }");
         }
     }
 
@@ -253,7 +253,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->setObjectName("statusBar");
     // This sets the status bar style sheet
-    statusBar()->setStyleSheet("#statusBar { color: #ffffff; background-color: qradialgradient(cx: -0.8, cy: 0, fx: -0.8, fy: 0, radius: 0.6, stop: 0 #1c1c1c, stop: 1 #353535);  }");
+    statusBar()->setStyleSheet("#statusBar { background-color:rgb(28, 28, 28);border:0px;}");
     syncIconMovie = new QMovie(fUseDefaultTheme ? ":/movies/update_spinner_black" : ":/movies/update_spinner", "mng", this);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
@@ -457,7 +457,7 @@ static QWidget* makeToolBarSpacer()
 {
     QWidget* spacer = new QWidget();
     spacer->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    spacer->setStyleSheet("QWidget { background: rgb(255, 165, 0); }");
+    spacer->setStyleSheet("QWidget { background-color:rgb(255, 165, 0);border:1px solid rgb(255, 165, 0);}");
     return spacer;
 }
 
@@ -470,7 +470,7 @@ void BitcoinGUI::createToolBars()
     toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     toolbar->setObjectName("tabs");
     // This sets the color for the whole left menu
-    toolbar->setStyleSheet("QToolButton { color: #ffffff; background:rgb(255, 165, 0);font-weight:bold;} QToolButton:hover { background-color:  #ffb833 } QToolButton:checked { background-color: #ffa500 } QToolButton:pressed { background-color: #ffa500 } #tabs { color: #ffffff; background-color: rgb(255, 165, 0);}");
+    toolbar->setStyleSheet("QToolButton { background-color:rgb(255, 165, 0);color:rgb(255, 255, 255); font-weight:bold;} QToolButton:hover {background-color:rgb(255, 175, 26);color:rgb(51, 51, 51);} QToolButton:checked { background-color:rgb(255, 175, 26); } QToolButton:pressed {  } #tabs { }");
     QLabel* header = new QLabel();
     header->setMinimumSize(142, 0);
     header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -497,7 +497,7 @@ void BitcoinGUI::createToolBars()
 
     QWidget *spacer = makeToolBarSpacer();
     netLabel->setObjectName("netLabel");
-    netLabel->setStyleSheet("#netLabel { color: #dedede; }");
+    netLabel->setStyleSheet("#netLabel {background-color:rgb(28, 28, 28);color:rgb(255, 165, 0); padding: 0px 5px;}");
     toolbar->addWidget(spacer);
     toolbar->setOrientation(Qt::Vertical);
     toolbar->setMovable(false);
@@ -745,7 +745,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
         progressBarLabel->setText(tr(clientModel->isImporting() ? "Importing blocks..." : "Synchronizing with network..."));
         progressBarLabel->setVisible(true);
-        progressBarLabel->setStyleSheet("QLabel { color: #dedede }");
+        progressBarLabel->setStyleSheet("QLabel {  }");
         progressBar->setFormat(tr("%1 behind").arg(timeBehindText));
         progressBar->setMaximum(totalSecs);
         progressBar->setValue(totalSecs - secs);

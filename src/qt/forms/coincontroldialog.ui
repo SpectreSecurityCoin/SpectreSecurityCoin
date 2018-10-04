@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Coin Control</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(51, 51, 51);
+color: rgb(255, 255, 255);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayoutTop" stretch="0,0,0,0">
@@ -379,39 +383,55 @@
         <height>41</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0,0">
+      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0,0,0">
        <property name="spacing">
         <number>14</number>
        </property>
        <item>
-       <widget class="QPushButton" name="pushButtonSelectAll">
+        <widget class="QPushButton" name="pushButtonSelectAll">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>(un)select all</string>
          </property>
         </widget>
        </item>
-        <item>
-         <widget class="QPushButton" name="pushButtonToggleLock">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>toggle lock state</string>
-          </property>
-          <property name="autoDefault">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonToggleLock">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>toggle lock state</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
        <item>
         <widget class="QRadioButton" name="radioTreeMode">
          <property name="sizePolicy">
@@ -429,7 +449,7 @@
         </widget>
        </item>
        <item>
-       <widget class="QRadioButton" name="radioListMode">
+        <widget class="QRadioButton" name="radioListMode">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -441,13 +461,13 @@
          </property>
         </widget>
        </item>
-        <item>
-         <widget class="QLabel" name="labelLocked">
-          <property name="text">
-           <string>(1 locked)</string>
-          </property>
-         </widget>
-        </item>
+       <item>
+        <widget class="QLabel" name="labelLocked">
+         <property name="text">
+          <string>(1 locked)</string>
+         </property>
+        </widget>
+       </item>
        <item>
         <spacer name="horizontalSpacer">
          <property name="orientation">
@@ -466,7 +486,7 @@
     </widget>
    </item>
    <item>
-     <widget class="CoinControlTreeWidget" name="treeWidget">
+    <widget class="CoinControlTreeWidget" name="treeWidget">
      <property name="contextMenuPolicy">
       <enum>Qt::CustomContextMenu</enum>
      </property>
@@ -558,6 +578,15 @@ color: rgb(0, 0, 0);</string>
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin-top:5px;</string>
      </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>

@@ -14,11 +14,18 @@
    <string>Address Book</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color:rgb(51, 51, 51);</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <widget class="QLabel" name="labelExplanation">
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(28, 28, 28);
+color: rgb(255, 255, 255);
+border-radius:3px;
+padding:5px;
+margin-bottom:5px;</string>
+     </property>
      <property name="text">
       <string>These are your sent and received encrypted messages. Click on an item to read it.</string>
      </property>
@@ -89,6 +96,15 @@ color: rgb(0, 0, 0);</string>
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QPushButton" name="backButton">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+            </property>
             <property name="text">
              <string>&amp;Back</string>
             </property>
@@ -100,6 +116,9 @@ color: rgb(0, 0, 0);</string>
           </item>
           <item>
            <widget class="QLabel" name="labelContact">
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
             <property name="text">
              <string>Contact:</string>
             </property>
@@ -130,9 +149,10 @@ color: rgb(0, 0, 0);</string>
         <item>
          <widget class="QListView" name="listConversation">
           <property name="styleSheet">
-           <string notr="true">#listConversation {color: rgb(0, 0, 0);
-background-color: rgb(255, 255, 255);  }
-</string>
+           <string notr="true">#listConversation {
+ 
+background-color: rgb(255, 255, 255);
+}</string>
           </property>
          </widget>
         </item>
@@ -156,6 +176,15 @@ background-color: rgb(255, 255, 255);  }
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="newButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+         </property>
          <property name="text">
           <string>&amp;Conversation</string>
          </property>
@@ -169,6 +198,15 @@ background-color: rgb(255, 255, 255);  }
         <widget class="QPushButton" name="sendButton">
          <property name="toolTip">
           <string>Sign a message to prove you own a SpectreSecurityCoin address</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
          </property>
          <property name="text">
           <string>&amp;Send</string>
@@ -184,6 +222,15 @@ background-color: rgb(255, 255, 255);  }
          <property name="toolTip">
           <string>Copy the currently selected address to the system clipboard</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+         </property>
          <property name="text">
           <string>&amp;Copy From Address</string>
          </property>
@@ -198,6 +245,15 @@ background-color: rgb(255, 255, 255);  }
          <property name="toolTip">
           <string>Copy the currently selected address to the system clipboard</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+         </property>
          <property name="text">
           <string>Copy To &amp;Address</string>
          </property>
@@ -211,6 +267,15 @@ background-color: rgb(255, 255, 255);  }
         <widget class="QPushButton" name="deleteButton">
          <property name="toolTip">
           <string>Delete the currently selected address from the list</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
          </property>
          <property name="text">
           <string>&amp;Delete</string>

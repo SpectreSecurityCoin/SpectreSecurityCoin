@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Send Coins</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(51, 51, 51);
+color: rgb(255, 255, 255);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1,0">
    <property name="bottomMargin">
     <number>8</number>
@@ -32,8 +36,9 @@
       </size>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);
-background-color: rgb(53, 53, 53);</string>
+      <string notr="true">background-color:rgb(28, 28, 28);
+color: rgb(255, 255, 255);
+border-radius:3px;</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
@@ -91,7 +96,9 @@ background-color: rgb(53, 53, 53);</string>
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">font-weight:bold;</string>
+             <string notr="true">color:rgb(255, 165, 0);
+font: 75 11pt &quot;Ubuntu&quot;;
+font-weight:bold;</string>
             </property>
             <property name="text">
              <string>Coin Control Features</string>
@@ -111,7 +118,12 @@ background-color: rgb(53, 53, 53);</string>
           <item>
            <widget class="QPushButton" name="pushButtonCoinControl">
             <property name="styleSheet">
-             <string notr="true"/>
+             <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
             </property>
             <property name="text">
              <string>Inputs...</string>
@@ -732,12 +744,11 @@ color: rgb(0, 0, 0);</string>
         <x>0</x>
         <y>0</y>
         <width>830</width>
-        <height>113</height>
+        <height>127</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(53, 53, 53);
-color: rgb(255, 255, 255);</string>
+       <string notr="true"/>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="leftMargin">
@@ -783,6 +794,15 @@ color: rgb(255, 255, 255);</string>
        <property name="toolTip">
         <string>Send to multiple recipients at once</string>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+       </property>
        <property name="text">
         <string>Add &amp;Recipient</string>
        </property>
@@ -801,6 +821,15 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="toolTip">
         <string>Remove all transaction fields</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
        </property>
        <property name="text">
         <string>Clear &amp;All</string>
@@ -916,6 +945,9 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="toolTip">
         <string>Confirm the send action</string>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); padding:2px 0px; font: 75 10pt 'Ubuntu';font-weight:bold; border-radius:2px; padding:5px;color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>S&amp;end</string>

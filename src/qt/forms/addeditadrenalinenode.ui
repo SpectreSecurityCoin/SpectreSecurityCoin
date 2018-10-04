@@ -14,7 +14,8 @@
    <string>Add/Edit SpectreSecurityCoin Node</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color:rgb(51, 51, 51);
+color: rgb(255, 255, 255);</string>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -194,6 +195,16 @@ color: rgb(0, 0, 0);</string>
     <layout class="QHBoxLayout" name="horizontalLayout_Buttons">
      <item>
       <widget class="QPushButton" name="okButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); 
+padding:2px 0px;
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+       </property>
        <property name="text">
         <string>&amp;OK</string>
        </property>
@@ -201,6 +212,15 @@ color: rgb(0, 0, 0);</string>
      </item>
      <item>
       <widget class="QPushButton" name="cancelButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); 
+padding:2px 0px;
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px;
+color: rgb(255, 255, 255);</string>
+       </property>
        <property name="text">
         <string>&amp;Cancel</string>
        </property>

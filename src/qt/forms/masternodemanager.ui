@@ -26,8 +26,7 @@
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: #292c30
-</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="topLayout">
    <property name="leftMargin">
@@ -52,21 +51,15 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <property name="leftMargin">
-       <number>24</number>
-      </property>
-      <property name="topMargin">
-       <number>24</number>
+       <number>9</number>
       </property>
       <property name="rightMargin">
-       <number>24</number>
-      </property>
-      <property name="bottomMargin">
-       <number>24</number>
+       <number>9</number>
       </property>
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
-        <property name="spacing">
-         <number>10</number>
+        <property name="rightMargin">
+         <number>0</number>
         </property>
         <item>
          <widget class="QFrame" name="frame_10">
@@ -84,8 +77,9 @@
           </property>
           <property name="styleSheet">
            <string notr="true">#frame_10 {
-    background-color: #353535;
-    border: 1px solid black;
+background-color:rgb(28, 28, 28);
+color: rgb(255, 255, 255);
+border-radius:3px;
 }</string>
           </property>
           <property name="frameShape">
@@ -113,13 +107,13 @@
               <number>10</number>
              </property>
              <property name="topMargin">
-              <number>10</number>
+              <number>1</number>
              </property>
              <property name="rightMargin">
               <number>10</number>
              </property>
              <property name="bottomMargin">
-              <number>10</number>
+              <number>1</number>
              </property>
              <item>
               <widget class="QFrame" name="frame_11">
@@ -166,14 +160,18 @@
                    <widget class="QLabel" name="receivingLabel_3">
                     <property name="font">
                      <font>
-                      <pointsize>12</pointsize>
+                      <family>Ubuntu</family>
+                      <pointsize>11</pointsize>
                       <weight>75</weight>
+                      <italic>false</italic>
                       <bold>true</bold>
                      </font>
                     </property>
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(53, 53, 53);
-color: rgb(255, 255, 255);</string>
+                     <string notr="true">color:rgb(255, 165, 0);
+font: 75 11pt &quot;Ubuntu&quot;;
+font-weight:bold;
+background-color:rgb(28, 28, 28);</string>
                     </property>
                     <property name="text">
                      <string>SpectreSecurityCoin Masternode Dashboard</string>
@@ -200,9 +198,9 @@ color: rgb(255, 255, 255);</string>
           </property>
           <property name="styleSheet">
            <string notr="true">#frame_7 {
-    background-color: #fff;
-    border: 1px solid black;
-	background-color: rgb(53, 53, 53);
+background-color:rgb(28, 28, 28);
+color: rgb(255, 255, 255);
+border-radius:3px;
 }</string>
           </property>
           <property name="frameShape">
@@ -233,6 +231,15 @@ color: rgb(255, 255, 255);</string>
               <layout class="QHBoxLayout" name="horizontalLayout_11">
                <item>
                 <widget class="QPushButton" name="createButton">
+                 <property name="styleSheet">
+                  <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 2px 0px;</string>
+                 </property>
                  <property name="text">
                   <string>&amp;Create...</string>
                  </property>
@@ -262,7 +269,7 @@ color: rgb(255, 255, 255);</string>
                 </size>
                </property>
                <property name="styleSheet">
-                <string notr="true">background-color: #fff</string>
+                <string notr="true">background-color: rgb(255, 255, 255);</string>
                </property>
                <property name="editTriggers">
                 <set>QAbstractItemView::NoEditTriggers</set>
@@ -315,8 +322,7 @@ color: rgb(255, 255, 255);</string>
          <widget class="QFrame" name="frame_2">
           <property name="styleSheet">
            <string notr="true">#frame_2 {
-    background-color: #353535;
-    border: 1px solid black;
+
 }</string>
           </property>
           <property name="frameShape">
@@ -330,13 +336,13 @@ color: rgb(255, 255, 255);</string>
             <number>10</number>
            </property>
            <property name="topMargin">
-            <number>10</number>
+            <number>1</number>
            </property>
            <property name="rightMargin">
             <number>10</number>
            </property>
            <property name="bottomMargin">
-            <number>10</number>
+            <number>1</number>
            </property>
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_12">
@@ -358,6 +364,14 @@ color: rgb(255, 255, 255);</string>
              </item>
              <item>
               <widget class="QPushButton" name="UpdateButton">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+               </property>
                <property name="text">
                 <string>&amp;Update</string>
                </property>
@@ -365,6 +379,14 @@ color: rgb(255, 255, 255);</string>
              </item>
              <item>
               <widget class="QPushButton" name="startButton">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+               </property>
                <property name="text">
                 <string>S&amp;tart</string>
                </property>
@@ -372,6 +394,14 @@ color: rgb(255, 255, 255);</string>
              </item>
              <item>
               <widget class="QPushButton" name="startAllButton">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+               </property>
                <property name="text">
                 <string>St&amp;art All</string>
                </property>

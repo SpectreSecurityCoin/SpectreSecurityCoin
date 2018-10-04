@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Options</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(51, 51, 51);</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -20,7 +23,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color:rgb(28, 28, 28);</string>
      </property>
      <property name="tabPosition">
       <enum>QTabWidget::North</enum>
@@ -35,6 +38,9 @@
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0" colspan="2">
         <widget class="QLabel" name="transactionFeeInfoLabel">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB. Fee 0.01 recommended.</string>
          </property>
@@ -50,6 +56,9 @@
         <layout class="QHBoxLayout" name="horizontalLayoutFee">
          <item>
           <widget class="QLabel" name="transactionFeeLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>Pay transaction &amp;fee</string>
            </property>
@@ -86,6 +95,9 @@ color: rgb(0, 0, 0);</string>
        </item>
        <item row="2" column="0" colspan="2">
         <widget class="QLabel" name="reserveBalanceInfoLabel">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Reserved amount does not participate in staking and is therefore spendable at any time.</string>
          </property>
@@ -101,6 +113,9 @@ color: rgb(0, 0, 0);</string>
         <layout class="QHBoxLayout" name="horizontalLayoutReserveBalance">
          <item>
           <widget class="QLabel" name="reserveBalanceLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>Reserve</string>
            </property>
@@ -166,6 +181,9 @@ color: rgb(0, 0, 0);</string>
          <property name="toolTip">
           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This setting determines the amount of individual masternodes that an input will be anonymized through. More rounds of anonymization gives a higher degree of privacy, but also costs more in fees.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Darksend rounds to use</string>
          </property>
@@ -205,6 +223,9 @@ color: rgb(0, 0, 0);</string>
          <property name="accessibleDescription">
           <string notr="true"/>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Amount of SpectreSecurityCoin to keep anonymized</string>
          </property>
@@ -242,6 +263,9 @@ color: rgb(0, 0, 0);</string>
          <property name="toolTip">
           <string>Automatically open the SpectreSecurityCoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
          </property>
@@ -252,6 +276,9 @@ color: rgb(0, 0, 0);</string>
          <property name="toolTip">
           <string>Connect to the SpectreSecurityCoin network through a SOCKS5 proxy (e.g. when connecting through Tor).</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy:</string>
          </property>
@@ -261,6 +288,9 @@ color: rgb(0, 0, 0);</string>
         <layout class="QHBoxLayout" name="horizontalLayout_Network">
          <item>
           <widget class="QLabel" name="proxyIpLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>Proxy &amp;IP:</string>
            </property>
@@ -291,6 +321,9 @@ color: rgb(0, 0, 0);</string>
          </item>
          <item>
           <widget class="QLabel" name="proxyPortLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>&amp;Port:</string>
            </property>
@@ -312,6 +345,10 @@ color: rgb(0, 0, 0);</string>
            </property>
            <property name="toolTip">
             <string>Port of the proxy (e.g. 9050)</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
            </property>
           </widget>
          </item>
@@ -355,6 +392,9 @@ color: rgb(0, 0, 0);</string>
          <property name="toolTip">
           <string>Show only a tray icon after minimizing the window.</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>&amp;Minimize to the tray instead of the taskbar</string>
          </property>
@@ -364,6 +404,9 @@ color: rgb(0, 0, 0);</string>
         <widget class="QCheckBox" name="minimizeOnClose">
          <property name="toolTip">
           <string>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</string>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
           <string>M&amp;inimize on close</string>
@@ -394,6 +437,9 @@ color: rgb(0, 0, 0);</string>
         <layout class="QHBoxLayout" name="horizontalLayout_1_Display">
          <item>
           <widget class="QLabel" name="langLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>User Interface &amp;language:</string>
            </property>
@@ -410,6 +456,10 @@ color: rgb(0, 0, 0);</string>
            <property name="toolTip">
             <string>The user interface language can be set here. This setting will take effect after restarting SpectreSecurityCoin.</string>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
           </widget>
          </item>
         </layout>
@@ -418,6 +468,9 @@ color: rgb(0, 0, 0);</string>
         <layout class="QHBoxLayout" name="horizontalLayout_2_Display">
          <item>
           <widget class="QLabel" name="unitLabel">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
            <property name="text">
             <string>&amp;Unit to show amounts in:</string>
            </property>
@@ -434,6 +487,10 @@ color: rgb(0, 0, 0);</string>
            <property name="toolTip">
             <string>Choose the default subdivision unit to show in the interface and when sending coins.</string>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+           </property>
           </widget>
          </item>
         </layout>
@@ -443,6 +500,9 @@ color: rgb(0, 0, 0);</string>
          <property name="toolTip">
           <string>Whether to show coin control features or not.</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Display coin &amp;control features (experts only!)</string>
          </property>
@@ -450,6 +510,9 @@ color: rgb(0, 0, 0);</string>
        </item>
        <item>
         <widget class="QCheckBox" name="useDefaultTheme">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Use default visual theme (requires restart)</string>
          </property>
@@ -521,6 +584,14 @@ color: rgb(0, 0, 0);</string>
      </item>
      <item>
       <widget class="QPushButton" name="okButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+       </property>
        <property name="text">
         <string>&amp;OK</string>
        </property>
@@ -528,6 +599,14 @@ color: rgb(0, 0, 0);</string>
      </item>
      <item>
       <widget class="QPushButton" name="cancelButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+       </property>
        <property name="text">
         <string>&amp;Cancel</string>
        </property>
@@ -538,6 +617,14 @@ color: rgb(0, 0, 0);</string>
      </item>
      <item>
       <widget class="QPushButton" name="applyButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);</string>
+       </property>
        <property name="text">
         <string>&amp;Apply</string>
        </property>
