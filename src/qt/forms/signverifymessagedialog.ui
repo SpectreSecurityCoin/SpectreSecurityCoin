@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Signatures - Sign / Verify a Message</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(51, 51, 51);</string>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -20,7 +23,7 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
+      <string notr="true">background-color:rgb(28, 28, 28);</string>
      </property>
      <property name="currentIndex">
       <number>0</number>
@@ -58,7 +61,8 @@
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:2px;</string>
            </property>
            <property name="maxLength">
             <number>34</number>
@@ -69,6 +73,9 @@ color: rgb(0, 0, 0);</string>
           <widget class="QPushButton" name="addressBookButton_SM">
            <property name="toolTip">
             <string>Choose an address from the address book</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(28, 28, 28);</string>
            </property>
            <property name="text">
             <string/>
@@ -89,6 +96,9 @@ color: rgb(0, 0, 0);</string>
           <widget class="QPushButton" name="pasteButton_SM">
            <property name="toolTip">
             <string>Paste address from clipboard</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(28, 28, 28);</string>
            </property>
            <property name="text">
             <string/>
@@ -112,6 +122,11 @@ color: rgb(0, 0, 0);</string>
          <property name="toolTip">
           <string>Enter the message you want to sign here</string>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+padding:2px;</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -126,6 +141,11 @@ color: rgb(0, 0, 0);</string>
              <italic>true</italic>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+padding:2px;</string>
+           </property>
            <property name="readOnly">
             <bool>true</bool>
            </property>
@@ -135,6 +155,9 @@ color: rgb(0, 0, 0);</string>
           <widget class="QPushButton" name="copySignatureButton_SM">
            <property name="toolTip">
             <string>Copy the current signature to the system clipboard</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(28, 28, 28);</string>
            </property>
            <property name="text">
             <string/>
@@ -157,6 +180,15 @@ color: rgb(0, 0, 0);</string>
            <property name="toolTip">
             <string>Sign the message to prove you own this SpectreSecurityCoin address</string>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+           </property>
            <property name="text">
             <string>&amp;Sign Message</string>
            </property>
@@ -173,6 +205,15 @@ color: rgb(0, 0, 0);</string>
           <widget class="QPushButton" name="clearButton_SM">
            <property name="toolTip">
             <string>Reset all sign message fields</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
            </property>
            <property name="text">
             <string>Clear &amp;All</string>
@@ -207,6 +248,9 @@ color: rgb(0, 0, 0);</string>
              <bold>true</bold>
             </font>
            </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(28, 28, 28);</string>
+           </property>
            <property name="text">
             <string/>
            </property>
@@ -239,6 +283,9 @@ color: rgb(0, 0, 0);</string>
       <layout class="QVBoxLayout" name="verticalLayout_VM">
        <item>
         <widget class="QLabel" name="infoLabel_VM">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
          <property name="text">
           <string>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</string>
          </property>
@@ -265,7 +312,8 @@ color: rgb(0, 0, 0);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:2px;</string>
            </property>
            <property name="maxLength">
             <number>34</number>
@@ -276,6 +324,9 @@ color: rgb(0, 0, 0);</string>
           <widget class="QPushButton" name="addressBookButton_VM">
            <property name="toolTip">
             <string>Choose an address from the address book</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(0, 0, 0);</string>
            </property>
            <property name="text">
             <string/>
@@ -298,7 +349,8 @@ color: rgb(0, 0, 0);</string>
         <widget class="QPlainTextEdit" name="messageIn_VM">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:2px;</string>
          </property>
         </widget>
        </item>
@@ -306,7 +358,8 @@ color: rgb(0, 0, 0);</string>
         <widget class="QValidatedLineEdit" name="signatureIn_VM">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:2px;</string>
          </property>
         </widget>
        </item>
@@ -316,6 +369,15 @@ color: rgb(0, 0, 0);</string>
           <widget class="QPushButton" name="verifyMessageButton_VM">
            <property name="toolTip">
             <string>Verify the message to ensure it was signed with the specified SpectreSecurityCoin address</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
            </property>
            <property name="text">
             <string>&amp;Verify Message</string>
@@ -333,6 +395,15 @@ color: rgb(0, 0, 0);</string>
           <widget class="QPushButton" name="clearButton_VM">
            <property name="toolTip">
             <string>Reset all verify message fields</string>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
            </property>
            <property name="text">
             <string>Clear &amp;All</string>
@@ -366,6 +437,9 @@ color: rgb(0, 0, 0);</string>
              <weight>75</weight>
              <bold>true</bold>
             </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color:rgb(28, 28, 28);</string>
            </property>
            <property name="text">
             <string/>

@@ -14,7 +14,8 @@
    <string>Configure Darksend</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">color: rgb(255, 255, 255);</string>
+   <string notr="true">background-color:rgb(51, 51, 51);
+color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QPushButton" name="buttonBasic">
    <property name="geometry">
@@ -24,6 +25,16 @@
      <width>151</width>
      <height>27</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 165, 0); 
+padding:2px 0px;
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
    </property>
    <property name="text">
     <string>Basic Privacy</string>
@@ -38,6 +49,16 @@
      <height>27</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 165, 0); 
+padding:2px 0px;
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+   </property>
    <property name="text">
     <string>High Privacy</string>
    </property>
@@ -50,6 +71,16 @@
      <width>151</width>
      <height>27</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 165, 0); 
+padding:2px 0px;
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
    </property>
    <property name="text">
     <string>Maximum Privacy</string>

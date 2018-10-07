@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>QR Code Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(51, 51, 51);
+color: rgb(255, 255, 255);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
     <widget class="QLabel" name="lblQRCode">
@@ -163,6 +167,10 @@ color: rgb(0, 0, 0);</string>
             <height>0</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+          </property>
          </widget>
         </item>
        </layout>
@@ -184,6 +192,15 @@ color: rgb(0, 0, 0);</string>
         </item>
         <item>
          <widget class="QPushButton" name="btnSaveAs">
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 165, 0); 
+font: 75 10pt 'Ubuntu';
+font-weight:bold; 
+border-radius:2px; 
+padding:5px 15px;
+color: rgb(255, 255, 255);
+margin:0px 5px 0px 0px;</string>
+          </property>
           <property name="text">
            <string>&amp;Save As...</string>
           </property>
