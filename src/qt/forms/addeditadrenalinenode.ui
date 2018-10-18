@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>331</width>
-    <height>387</height>
+    <height>365</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -53,7 +53,9 @@ color: rgb(255, 255, 255);</string>
       <widget class="QLineEdit" name="aliasLineEdit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+margin-bottom:5px;</string>
        </property>
       </widget>
      </item>
@@ -75,7 +77,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLineEdit" name="addressLineEdit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+margin-bottom:5px;</string>
        </property>
       </widget>
      </item>
@@ -97,7 +101,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLineEdit" name="privkeyLineEdit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+margin-bottom:5px;</string>
        </property>
       </widget>
      </item>
@@ -119,7 +125,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLineEdit" name="txhashLineEdit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+margin-bottom:5px;</string>
        </property>
       </widget>
      </item>
@@ -141,7 +149,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLineEdit" name="outputindexLineEdit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+margin-bottom:5px;</string>
        </property>
       </widget>
      </item>
@@ -163,7 +173,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLineEdit" name="donationaddressLineEdit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+margin-bottom:5px;</string>
        </property>
       </widget>
      </item>
@@ -185,7 +197,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="QLineEdit" name="donationpercentageLineEdit">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+margin-bottom:5px;</string>
        </property>
       </widget>
      </item>

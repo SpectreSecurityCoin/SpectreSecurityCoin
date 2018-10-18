@@ -29,7 +29,7 @@
       <enum>QTabWidget::North</enum>
      </property>
      <property name="currentIndex">
-      <number>3</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabMain">
       <attribute name="title">
@@ -74,7 +74,8 @@
           <widget class="BitcoinAmountField" name="transactionFee">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;</string>
            </property>
           </widget>
          </item>
@@ -131,7 +132,8 @@ color: rgb(0, 0, 0);</string>
           <widget class="BitcoinAmountField" name="reserveBalance">
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;</string>
            </property>
           </widget>
          </item>
@@ -193,7 +195,9 @@ color: rgb(0, 0, 0);</string>
         <widget class="QSpinBox" name="darksendRounds">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+border-radius:0px;</string>
          </property>
          <property name="minimum">
           <number>2</number>
@@ -235,7 +239,9 @@ color: rgb(0, 0, 0);</string>
         <widget class="QSpinBox" name="anonymizeSpectreSecurityCoin">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+border-radius:0px;</string>
          </property>
          <property name="minimum">
           <number>2</number>
@@ -315,7 +321,8 @@ color: rgb(0, 0, 0);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;</string>
            </property>
           </widget>
          </item>
@@ -348,7 +355,8 @@ color: rgb(0, 0, 0);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;</string>
            </property>
           </widget>
          </item>
@@ -458,7 +466,9 @@ color: rgb(0, 0, 0);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+border-radius:0px;</string>
            </property>
           </widget>
          </item>
@@ -489,7 +499,9 @@ color: rgb(0, 0, 0);</string>
            </property>
            <property name="styleSheet">
             <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:3px;
+border-radius:0px;</string>
            </property>
           </widget>
          </item>
@@ -511,7 +523,7 @@ color: rgb(0, 0, 0);</string>
        <item>
         <widget class="QCheckBox" name="useDefaultTheme">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
+          <string notr="true">color: rgb(255, 255, 255);</string>
          </property>
          <property name="text">
           <string>Use default visual theme (requires restart)</string>

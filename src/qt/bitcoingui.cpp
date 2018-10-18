@@ -225,7 +225,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
         QString curStyle = qApp->style()->metaObject()->className();
         if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
         {
-            progressBar->setStyleSheet("QProgressBar { } QProgressBar::chunk {  }");
+            progressBar->setStyleSheet("QProgressBar { color:rgb(255, 255, 255); } QProgressBar::chunk {  }");
         }
     }
 
@@ -253,7 +253,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->setObjectName("statusBar");
     // This sets the status bar style sheet
-    statusBar()->setStyleSheet("#statusBar { background-color:rgb(28, 28, 28);border:0px;}");
+    statusBar()->setStyleSheet("#statusBar { color:rgb(255, 255, 255);background-color:rgb(28, 28, 28);border:0px;}");
     syncIconMovie = new QMovie(fUseDefaultTheme ? ":/movies/update_spinner_black" : ":/movies/update_spinner", "mng", this);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page

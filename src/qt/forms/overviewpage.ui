@@ -610,7 +610,7 @@ font-weight:bold;</string>
               <property name="styleSheet">
                <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(255, 165, 0);
-valign:middle;</string>
+border-radius:1px;</string>
               </property>
               <property name="value">
                <number>0</number>
@@ -652,6 +652,9 @@ valign:middle;</string>
             </item>
             <item row="4" column="1">
              <widget class="QLabel" name="labelAmountRounds">
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>0 XSPC / 0 Rounds</string>
               </property>
