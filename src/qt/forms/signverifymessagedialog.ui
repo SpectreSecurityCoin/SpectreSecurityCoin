@@ -26,7 +26,7 @@
       <string notr="true">background-color:rgb(28, 28, 28);</string>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabSignMessage">
       <attribute name="title">

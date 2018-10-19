@@ -76,7 +76,8 @@ border-radius:3px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding-left:5px;</string>
        </property>
       </widget>
      </item>
@@ -105,7 +106,9 @@ color: rgb(0, 0, 0);</string>
       <widget class="BitcoinAmountField" name="payAmount">
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding:2px;
+border-radius:0px;</string>
        </property>
       </widget>
      </item>
@@ -134,7 +137,8 @@ color: rgb(0, 0, 0);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding-left:5px;</string>
        </property>
        <property name="maxLength">
         <number>80</number>

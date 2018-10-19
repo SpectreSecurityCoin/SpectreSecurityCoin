@@ -225,7 +225,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
         QString curStyle = qApp->style()->metaObject()->className();
         if(curStyle == "QWindowsStyle" || curStyle == "QWindowsXPStyle")
         {
-            progressBar->setStyleSheet("QProgressBar { } QProgressBar::chunk {  }");
+            progressBar->setStyleSheet("QProgressBar { color:rgb(255, 255, 255); } QProgressBar::chunk {  }");
         }
     }
 
@@ -253,7 +253,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     statusBar()->addPermanentWidget(frameBlocks);
     statusBar()->setObjectName("statusBar");
     // This sets the status bar style sheet
-    statusBar()->setStyleSheet("#statusBar { background-color:rgb(28, 28, 28);border:0px;}");
+    statusBar()->setStyleSheet("#statusBar { color:rgb(255, 255, 255);background-color:rgb(28, 28, 28);border:0px;}");
     syncIconMovie = new QMovie(fUseDefaultTheme ? ":/movies/update_spinner_black" : ":/movies/update_spinner", "mng", this);
 
     // Clicking on a transaction on the overview page simply sends you to transaction history page
@@ -497,7 +497,7 @@ void BitcoinGUI::createToolBars()
 
     QWidget *spacer = makeToolBarSpacer();
     netLabel->setObjectName("netLabel");
-    netLabel->setStyleSheet("#netLabel {background-color:rgb(28, 28, 28);color:rgb(255, 165, 0); padding: 0px 5px;}");
+    netLabel->setStyleSheet("#netLabel {background-color:rgb(28, 28, 28);color:rgb(255, 165, 0); padding: 0px 5px;border:0px;}");
     toolbar->addWidget(spacer);
     toolbar->setOrientation(Qt::Vertical);
     toolbar->setMovable(false);
@@ -745,7 +745,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
         progressBarLabel->setText(tr(clientModel->isImporting() ? "Importing blocks..." : "Synchronizing with network..."));
         progressBarLabel->setVisible(true);
-        progressBarLabel->setStyleSheet("QLabel {  }");
+        progressBarLabel->setStyleSheet("QLabel {  border:0px;}");
         progressBar->setFormat(tr("%1 behind").arg(timeBehindText));
         progressBar->setMaximum(totalSecs);
         progressBar->setValue(totalSecs - secs);

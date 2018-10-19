@@ -101,7 +101,7 @@ font: 75 11pt &quot;Ubuntu&quot;;
 font-weight:bold;</string>
             </property>
             <property name="text">
-             <string>Coin Control Features</string>
+             <string>Advanced Coin Control</string>
             </property>
            </widget>
           </item>
@@ -646,7 +646,8 @@ color: rgb(255, 255, 255);</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding-left:5px;</string>
             </property>
             <property name="placeholderText">
              <string># of outputs</string>
@@ -697,7 +698,8 @@ color: rgb(0, 0, 0);</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(255, 255, 255);
-color: rgb(0, 0, 0);</string>
+color: rgb(0, 0, 0);
+padding-left:5px;</string>
             </property>
            </widget>
           </item>

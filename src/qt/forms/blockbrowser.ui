@@ -106,7 +106,8 @@ border-radius:3px;</string>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);
-padding:2px 0px;</string>
+padding:3px;
+border-radius:0px;</string>
           </property>
           <property name="inputMask">
            <string comment="Transaction id" extracomment="Transaction id"/>
@@ -234,7 +235,8 @@ margin:0px 5px 0px 0px;</string>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(255, 255, 255);
 color: rgb(0, 0, 0);
-padding:2px 0px;</string>
+padding:3px;
+border-radius:0px;</string>
           </property>
           <property name="maximum">
            <number>99999999</number>
