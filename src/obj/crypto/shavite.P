@@ -1,0 +1,4 @@
+obj/crypto/shavite.o: crypto/shavite.c crypto/sph_shavite.h \
+ crypto/sph_types.h crypto/aes_helper.c
+crypto/shavite.c crypto/sph_shavite.h :
+ crypto/sph_types.h crypto/aes_helper.c :

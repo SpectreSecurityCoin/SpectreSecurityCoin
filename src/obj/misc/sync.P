@@ -1,0 +1,12 @@
+obj/misc/sync.o: misc/sync.cpp misc/sync.h misc/threadsafety.h \
+ misc/util.h misc/serialize.h misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ misc/tinyformat.h
+misc/sync.cpp misc/sync.h misc/threadsafety.h :
+ misc/util.h misc/serialize.h misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ misc/tinyformat.h :

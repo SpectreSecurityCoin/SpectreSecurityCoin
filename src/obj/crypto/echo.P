@@ -1,0 +1,4 @@
+obj/crypto/echo.o: crypto/echo.c crypto/sph_echo.h crypto/sph_types.h \
+ crypto/aes_helper.c
+crypto/echo.c crypto/sph_echo.h crypto/sph_types.h :
+ crypto/aes_helper.c :

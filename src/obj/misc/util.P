@@ -1,0 +1,28 @@
+obj/misc/util.o: misc/util.cpp misc/util.h misc/serialize.h \
+ misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ misc/tinyformat.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h misc/sync.h \
+ misc/threadsafety.h misc/ui_interface.h misc/uint256.h misc/netbase.h \
+ misc/compat.h
+misc/util.cpp misc/util.h misc/serialize.h :
+ misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ misc/tinyformat.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h misc/sync.h :
+ misc/threadsafety.h misc/ui_interface.h misc/uint256.h misc/netbase.h :
+ misc/compat.h :

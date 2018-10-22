@@ -1,0 +1,6 @@
+obj/crypto/sha512.o: crypto/sha512.cpp \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha512.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/common.h
+crypto/sha512.cpp :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha512.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/common.h :

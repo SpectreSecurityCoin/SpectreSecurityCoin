@@ -1,0 +1,14 @@
+obj/misc/hash.o: misc/hash.cpp misc/hash.h misc/uint256.h \
+ misc/serialize.h misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h
+misc/hash.cpp misc/hash.h misc/uint256.h :
+ misc/serialize.h misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h :

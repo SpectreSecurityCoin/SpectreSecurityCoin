@@ -1,0 +1,38 @@
+obj/misc/alert.o: misc/alert.cpp misc/alert.h misc/serialize.h \
+ misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/tinyformat.h \
+ misc/pubkey.h misc/hash.h misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h misc/net.h \
+ misc/compat.h misc/core.h misc/script.h misc/keystore.h misc/key.h \
+ misc/sync.h misc/threadsafety.h misc/bignum.h misc/util.h misc/stealth.h \
+ misc/limitedmap.h misc/mruset.h misc/netbase.h misc/protocol.h \
+ misc/ui_interface.h
+misc/alert.cpp misc/alert.h misc/serialize.h :
+ misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/tinyformat.h :
+ misc/pubkey.h misc/hash.h misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h misc/net.h :
+ misc/compat.h misc/core.h misc/script.h misc/keystore.h misc/key.h :
+ misc/sync.h misc/threadsafety.h misc/bignum.h misc/util.h misc/stealth.h :
+ misc/limitedmap.h misc/mruset.h misc/netbase.h misc/protocol.h :
+ misc/ui_interface.h :

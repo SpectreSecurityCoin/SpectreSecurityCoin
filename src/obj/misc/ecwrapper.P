@@ -1,0 +1,12 @@
+obj/misc/ecwrapper.o: misc/ecwrapper.cpp misc/ecwrapper.h \
+ misc/serialize.h misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ misc/uint256.h
+misc/ecwrapper.cpp misc/ecwrapper.h :
+ misc/serialize.h misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ misc/uint256.h :

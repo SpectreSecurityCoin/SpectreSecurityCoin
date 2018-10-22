@@ -1,0 +1,4 @@
+obj/crypto/cubehash.o: crypto/cubehash.c crypto/sph_cubehash.h \
+ crypto/sph_types.h
+crypto/cubehash.c crypto/sph_cubehash.h :
+ crypto/sph_types.h :

@@ -1,0 +1,2 @@
+obj/crypto/aes_helper.o: crypto/aes_helper.c crypto/sph_types.h
+crypto/aes_helper.c crypto/sph_types.h :

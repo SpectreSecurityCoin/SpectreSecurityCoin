@@ -1,0 +1,2 @@
+obj/crypto/bmw.o: crypto/bmw.c crypto/sph_bmw.h crypto/sph_types.h
+crypto/bmw.c crypto/sph_bmw.h crypto/sph_types.h :

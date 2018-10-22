@@ -1,0 +1,2 @@
+obj/crypto/simd.o: crypto/simd.c crypto/sph_simd.h crypto/sph_types.h
+crypto/simd.c crypto/sph_simd.h crypto/sph_types.h :

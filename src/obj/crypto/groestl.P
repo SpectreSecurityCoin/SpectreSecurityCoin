@@ -1,0 +1,4 @@
+obj/crypto/groestl.o: crypto/groestl.c crypto/sph_groestl.h \
+ crypto/sph_types.h
+crypto/groestl.c crypto/sph_groestl.h :
+ crypto/sph_types.h :

@@ -1,0 +1,128 @@
+obj/misc/smessage.o: misc/smessage.cpp misc/smessage.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/db.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/iterator.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/slice.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/status.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/options.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/write_batch.h \
+ misc/net.h misc/compat.h misc/core.h misc/uint256.h misc/serialize.h \
+ misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ misc/script.h misc/keystore.h misc/key.h misc/pubkey.h misc/hash.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h \
+ misc/sync.h misc/threadsafety.h misc/bignum.h misc/util.h \
+ misc/tinyformat.h misc/stealth.h misc/limitedmap.h misc/mruset.h \
+ misc/netbase.h misc/protocol.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h misc/db.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/wallet/wallet.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/wallet/walletdb.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/db.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/key.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/keystore.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/stealth.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/crypter.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/key.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/keystore.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/script.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/ui_interface.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/main/main.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/core.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/sync.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/txmempool.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/core.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/net.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/scrypt.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/net.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/hashblock.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_blake.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_types.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_bmw.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_groestl.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_jh.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_keccak.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_skein.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_luffa.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_cubehash.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_shavite.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_simd.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_echo.h \
+ misc/base58.h /home/spectre/Desktop/SpectreSecurityCoin/src/lz4/lz4.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/main/init.h misc/txdb.h \
+ misc/txdb-leveldb.h misc/ecwrapper.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/lz4/lz4.c \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/xxhash/xxhash.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/xxhash/xxhash.c
+misc/smessage.cpp misc/smessage.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/db.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/iterator.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/slice.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/status.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/options.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/include/leveldb/write_batch.h :
+ misc/net.h misc/compat.h misc/core.h misc/uint256.h misc/serialize.h :
+ misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ misc/script.h misc/keystore.h misc/key.h misc/pubkey.h misc/hash.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h :
+ misc/sync.h misc/threadsafety.h misc/bignum.h misc/util.h :
+ misc/tinyformat.h misc/stealth.h misc/limitedmap.h misc/mruset.h :
+ misc/netbase.h misc/protocol.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h misc/db.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/wallet/wallet.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/wallet/walletdb.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/db.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/key.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/keystore.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/stealth.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/crypter.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/key.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/keystore.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/script.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/ui_interface.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/main/main.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/core.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/sync.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/txmempool.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/core.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/net.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/scrypt.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/net.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/hashblock.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_blake.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_types.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_bmw.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_groestl.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_jh.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_keccak.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_skein.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_luffa.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_cubehash.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_shavite.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_simd.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sph_echo.h :
+ misc/base58.h /home/spectre/Desktop/SpectreSecurityCoin/src/lz4/lz4.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/main/init.h misc/txdb.h :
+ misc/txdb-leveldb.h misc/ecwrapper.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/lz4/lz4.c :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/xxhash/xxhash.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/xxhash/xxhash.c :

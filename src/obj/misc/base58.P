@@ -1,0 +1,34 @@
+obj/misc/base58.o: misc/base58.cpp misc/base58.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/tinyformat.h \
+ misc/pubkey.h misc/hash.h misc/uint256.h misc/serialize.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h \
+ misc/script.h misc/keystore.h misc/key.h misc/allocators.h misc/sync.h \
+ misc/threadsafety.h misc/bignum.h misc/util.h misc/stealth.h
+misc/base58.cpp misc/base58.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/tinyformat.h :
+ misc/pubkey.h misc/hash.h misc/uint256.h misc/serialize.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h :
+ misc/script.h misc/keystore.h misc/key.h misc/allocators.h misc/sync.h :
+ misc/threadsafety.h misc/bignum.h misc/util.h misc/stealth.h :

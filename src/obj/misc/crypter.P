@@ -1,0 +1,30 @@
+obj/misc/crypter.o: misc/crypter.cpp misc/crypter.h misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ misc/key.h misc/pubkey.h misc/hash.h misc/uint256.h misc/serialize.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h \
+ misc/keystore.h misc/sync.h misc/threadsafety.h misc/script.h \
+ misc/bignum.h misc/util.h misc/tinyformat.h misc/stealth.h misc/scrypt.h \
+ misc/net.h misc/compat.h misc/core.h misc/limitedmap.h misc/mruset.h \
+ misc/netbase.h misc/protocol.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h
+misc/crypter.cpp misc/crypter.h misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ misc/key.h misc/pubkey.h misc/hash.h misc/uint256.h misc/serialize.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/ripemd160.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/crypto/sha256.h :
+ misc/keystore.h misc/sync.h misc/threadsafety.h misc/script.h :
+ misc/bignum.h misc/util.h misc/tinyformat.h misc/stealth.h misc/scrypt.h :
+ misc/net.h misc/compat.h misc/core.h misc/limitedmap.h misc/mruset.h :
+ misc/netbase.h misc/protocol.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/chainparams/chainparams.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/bignum.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/uint256.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h :

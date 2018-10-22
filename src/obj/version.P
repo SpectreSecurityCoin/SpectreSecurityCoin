@@ -1,0 +1,4 @@
+obj/version.o: version.cpp version.h misc/clientversion.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/obj/build.h
+version.cpp version.h misc/clientversion.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/obj/build.h :

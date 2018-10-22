@@ -1,0 +1,2 @@
+obj/crypto/jh.o: crypto/jh.c crypto/sph_jh.h crypto/sph_types.h
+crypto/jh.c crypto/sph_jh.h crypto/sph_types.h :

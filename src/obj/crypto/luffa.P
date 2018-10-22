@@ -1,0 +1,2 @@
+obj/crypto/luffa.o: crypto/luffa.c crypto/sph_luffa.h crypto/sph_types.h
+crypto/luffa.c crypto/sph_luffa.h crypto/sph_types.h :

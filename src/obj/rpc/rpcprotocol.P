@@ -1,0 +1,28 @@
+obj/rpc/rpcprotocol.o: rpc/rpcprotocol.cpp rpc/rpcprotocol.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/compat.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_reader_template.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_value.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_error_position.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_utils.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_writer_template.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/tinyformat.h
+rpc/rpcprotocol.cpp rpc/rpcprotocol.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/compat.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_reader_template.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_value.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_error_position.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_utils.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/json/json_spirit_writer_template.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/util.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/serialize.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/version.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/clientversion.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/misc/tinyformat.h :

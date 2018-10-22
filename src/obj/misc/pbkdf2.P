@@ -1,0 +1,2 @@
+obj/misc/pbkdf2.o: misc/pbkdf2.cpp misc/pbkdf2.h
+misc/pbkdf2.cpp misc/pbkdf2.h :

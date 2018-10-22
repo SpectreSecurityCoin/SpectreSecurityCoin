@@ -1,0 +1,4 @@
+obj/misc/allocators.o: misc/allocators.cpp misc/allocators.h \
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h
+misc/allocators.cpp misc/allocators.h :
+ /home/spectre/Desktop/SpectreSecurityCoin/src/support/cleanse.h :
