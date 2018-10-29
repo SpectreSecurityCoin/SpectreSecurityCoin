@@ -106,8 +106,8 @@ install_3rdparty(){
 	make clean
 	#cp -R openssl-1.1.0h openssl-win32-build
 	cd openssl-win32-build
-	export PATH=/mnt/mxe/usr/bin:$PATH
-	export PATH=$MXEPATH/bin:$PATH
+	eXSPCort PATH=/mnt/mxe/usr/bin:$PATH
+	eXSPCort PATH=$MXEPATH/bin:$PATH
 	CROSS_COMPILE="i686-w64-mingw32.static-" ./Configure mingw no-asm no-shared --prefix=/mnt/mxe/usr/i686-w64-mingw32.static
 	sudo make depend
 	make -j4
@@ -122,8 +122,8 @@ install_3rdparty(){
 	cd /home/spectre/Desktop/db-4.8.30
 	make clean
 	wget https://media.spectresecurity.io/scripts/db-4.8.30/berekeydb.sh
-	export PATH=/mnt/mxe/usr/bin:$PATH
-	export PATH=$MXEPATH/bin:$PATH
+	eXSPCort PATH=/mnt/mxe/usr/bin:$PATH
+	eXSPCort PATH=$MXEPATH/bin:$PATH
 	dos2unix berekeydb.sh
 	chmod ugo+x /home/spectre/Desktop/db-4.8.30/berekeydb.sh
 	sudo /home/spectre/Desktop/db-4.8.30/./berekeydb.sh
@@ -161,24 +161,24 @@ windows_qt(){
 	make clean
 
 	cd src/leveldb
-	export PATH=/mnt/mxe/usr/bin:$PATH
-	export PATH=$MXEPATH/bin:$PATH
+	eXSPCort PATH=/mnt/mxe/usr/bin:$PATH
+	eXSPCort PATH=$MXEPATH/bin:$PATH
 	TARGET_OS=NATIVE_WINDOWS make -j4 CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ libleveldb.a libmemenv.a
 	cd ../..
 	chmod 775 * -R
 	
 	cd src/secp256k1
 	make clean
-	export PATH=/mnt/mxe/usr/bin:$PATH
-	export PATH=$MXEPATH/bin:$PATH
+	eXSPCort PATH=/mnt/mxe/usr/bin:$PATH
+	eXSPCort PATH=$MXEPATH/bin:$PATH
 	chmod 775 * -R
 	./autogen.sh
 	./configure --host=i686-w64-mingw32.static --enable-static --disable-shared --enable-module-recovery
 	make -j4
 	cd ../..
 	
-	export PATH=/mnt/mxe/usr/bin:$PATH
-	export PATH=$MXEPATH/bin:$PATH
+	eXSPCort PATH=/mnt/mxe/usr/bin:$PATH
+	eXSPCort PATH=$MXEPATH/bin:$PATH
 	/mnt/mxe/usr/i686-w64-mingw32.static/qt5/bin/qmake SpectreSecurityCoin.pro
 	make -j4
 	pause
@@ -213,8 +213,8 @@ linux_options(){
 linux_daemon(){
 	echo " Building Linux Daemon"
 	cd /home/spectre/Desktop/SpectreSecurityCoin
-	export PATH=/mnt/mxe/usr/bin:$PATH
-	export PATH=$MXEPATH/bin:$PATH
+	eXSPCort PATH=/mnt/mxe/usr/bin:$PATH
+	eXSPCort PATH=$MXEPATH/bin:$PATH
 	sudo ./compile-daemon.sh
 	cp src/SpectreSecurityCoind .
 	echo " Done Building Linux Daemon"
@@ -226,8 +226,8 @@ linux_qt(){
 	echo " Building Linux QT Wallet"
 	cd /home/spectre/Desktop/SpectreSecurityCoin
 	make clean
-	export PATH=/mnt/mxe/usr/bin:$PATH
-	export PATH=$MXEPATH/bin:$PATH
+	eXSPCort PATH=/mnt/mxe/usr/bin:$PATH
+	eXSPCort PATH=$MXEPATH/bin:$PATH
 	/usr/lib/x86_64-linux-gnu/qt5/bin/qmake linux3.pro
 	make -j4
 	#sudo ./compile-qt.sh
