@@ -470,7 +470,7 @@ void BitcoinGUI::createToolBars()
     toolbar->setContextMenuPolicy(Qt::PreventContextMenu);
     toolbar->setObjectName("tabs");
     // This sets the color for the whole left menu
-    toolbar->setStyleSheet("QToolButton { background-color:rgb(255, 165, 0);color:rgb(255, 255, 255); font-weight:bold;} QToolButton:hover {background-color:rgb(255, 175, 26);color:rgb(51, 51, 51);} QToolButton:checked { background-color:rgb(255, 175, 26); } QToolButton:pressed {  } #tabs { }");
+    toolbar->setStyleSheet("QToolButton { background-color:rgb(255, 165, 0);color:rgb(255, 255, 255); font-weight:bold; padding:2px 5px;} QToolButton:hover {background-color:rgb(28, 28, 28);color:rgb(255, 255,255);} QToolButton:checked { background-color:rgb(255, 165, 0);color:rgb(28, 28, 28); } QToolButton:pressed {  } #tabs { }");
     QLabel* header = new QLabel();
     header->setMinimumSize(142, 0);
     header->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
@@ -745,7 +745,7 @@ void BitcoinGUI::setNumBlocks(int count)
 
         progressBarLabel->setText(tr(clientModel->isImporting() ? "Importing blocks..." : "Synchronizing with network..."));
         progressBarLabel->setVisible(true);
-        progressBarLabel->setStyleSheet("QLabel {  border:0px;}");
+        progressBarLabel->setStyleSheet("QLabel { padding:2px 5px;border:0px;}");
         progressBar->setFormat(tr("%1 behind").arg(timeBehindText));
         progressBar->setMaximum(totalSecs);
         progressBar->setValue(totalSecs - secs);
