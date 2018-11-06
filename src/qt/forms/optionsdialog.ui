@@ -549,6 +549,9 @@ border-radius:0px;</string>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_Buttons">
+     <property name="spacing">
+      <number>6</number>
+     </property>
      <item>
       <spacer name="horizontalSpacer_1">
        <property name="orientation">
