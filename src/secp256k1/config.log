@@ -29,6 +29,8 @@ uname -v = #39~16.04.1-Ubuntu SMP Tue Sep 25 08:59:23 UTC 2018
 
 PATH: /bin
 PATH: /mnt/mxe/usr/bin
+PATH: /bin
+PATH: /mnt/mxe/usr/bin
 PATH: /home/spectre/bin
 PATH: /home/spectre/.local/bin
 PATH: /usr/local/sbin
@@ -839,7 +841,6 @@ on ubuntu
 config.status:1131: creating Makefile
 config.status:1131: creating libsecp256k1.pc
 config.status:1131: creating src/libsecp256k1-config.h
-config.status:1312: src/libsecp256k1-config.h is unchanged
 config.status:1360: executing depfiles commands
 config.status:1360: executing libtool commands
 
