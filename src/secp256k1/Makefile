@@ -90,7 +90,7 @@ NORMAL_UNINSTALL = :
 PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-pc-linux-gnu
-host_triplet = x86_64-pc-linux-gnu
+host_triplet = i686-w64-mingw32.static
 noinst_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_3) \
 	$(am__EXEEXT_4) $(am__EXEEXT_5)
 #am__append_1 = bench_verify bench_sign bench_internal
@@ -480,7 +480,7 @@ am__set_TESTS_bases = \
   bases=`echo $$bases`
 RECHECK_LOGS = $(TEST_LOGS)
 TEST_SUITE_LOG = test-suite.log
-TEST_EXTENSIONS =  .test
+TEST_EXTENSIONS = .exe .test
 LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 LOG_COMPILE = $(LOG_COMPILER) $(AM_LOG_FLAGS) $(LOG_FLAGS)
 am__set_b = \
@@ -494,7 +494,7 @@ am__set_b = \
       b='$*';; \
   esac
 am__test_logs1 = $(TESTS:=.log)
-am__test_logs2 = $(am__test_logs1:.log=.log)
+am__test_logs2 = $(am__test_logs1:.exe.log=.log)
 TEST_LOGS = $(am__test_logs2:.test.log=.log)
 TEST_LOG_DRIVER = $(SHELL) $(top_srcdir)/build-aux/test-driver
 TEST_LOG_COMPILE = $(TEST_LOG_COMPILER) $(AM_TEST_LOG_FLAGS) \
@@ -535,7 +535,7 @@ distcleancheck_listfiles = find . -type f -print
 ACLOCAL = ${SHELL} /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1/build-aux/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 0
-AR = /usr/bin/ar
+AR = /mnt/mxe/usr/bin/i686-w64-mingw32.static-ar
 AUTOCONF = ${SHELL} /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1/build-aux/missing autoconf
 AUTOHEADER = ${SHELL} /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1/build-aux/missing autoheader
 AUTOMAKE = ${SHELL} /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1/build-aux/missing automake-1.15
@@ -543,28 +543,28 @@ AWK = mawk
 BREW = 
 BUILD_EXEEXT = 
 BUILD_OBJEXT = 
-CC = gcc
+CC = i686-w64-mingw32.static-gcc
 CCDEPMODE = depmode=gcc3
 CC_FOR_BUILD = gcc
 CFLAGS = -g -O2 -W -std=c89 -pedantic -Wall -Wextra -Wcast-align -Wnested-externs -Wshadow -Wstrict-prototypes -Wno-unused-function -Wno-long-long -Wno-overlength-strings -fvisibility=hidden
 CFLAGS_FOR_BUILD = -g -O2 $(am__append_4)
-CPP = gcc -E
+CPP = i686-w64-mingw32.static-gcc -E
 CPPFLAGS = 
 CPPFLAGS_FOR_BUILD =  $(am__append_3)
 CPP_FOR_BUILD = gcc -E
-CRYPTO_CFLAGS = 
-CRYPTO_LIBS = -lcrypto
+CRYPTO_CFLAGS =  
+CRYPTO_LIBS = -lcrypto -lws2_32 -lgdi32 -lcrypt32 -lz  
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
-DLLTOOL = false
+DLLTOOL = i686-w64-mingw32.static-dlltool
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
 ECHO_N = -n
 ECHO_T = 
 EGREP = /bin/grep -E
-EXEEXT = 
+EXEEXT = .exe
 FGREP = /bin/grep -F
 GREP = /bin/grep
 INSTALL = /usr/bin/install -c
@@ -572,7 +572,7 @@ INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld -m elf_x86_64
+LD = /mnt/mxe/usr/bin/i686-w64-mingw32.static-ld
 LDFLAGS = 
 LDFLAGS_FOR_BUILD = 
 LIBOBJS = 
@@ -585,9 +585,9 @@ LT_SYS_LIBRARY_PATH =
 MAKEINFO = ${SHELL} /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1/build-aux/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
-NM = /usr/bin/nm -B
+NM = /mnt/mxe/usr/bin/i686-w64-mingw32.static-nm -B
 NMEDIT = 
-OBJDUMP = objdump
+OBJDUMP = i686-w64-mingw32.static-objdump
 OBJEXT = o
 OTOOL = 
 OTOOL64 = 
@@ -599,26 +599,26 @@ PACKAGE_TARNAME = libsecp256k1
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PKG_CONFIG = /usr/bin/pkg-config
+PKG_CONFIG = /mnt/mxe/usr/bin/i686-w64-mingw32.static-pkg-config
 PKG_CONFIG_LIBDIR = 
 PKG_CONFIG_PATH = 
 PORT = 
-RANLIB = /usr/bin/ranlib
-SECP_INCLUDES =  
-SECP_LIBS =   -lgmp
-SECP_TEST_INCLUDES =  
-SECP_TEST_LIBS = -lcrypto
+RANLIB = /mnt/mxe/usr/bin/i686-w64-mingw32.static-ranlib
+SECP_INCLUDES = 
+SECP_LIBS = 
+SECP_TEST_INCLUDES =   
+SECP_TEST_LIBS = -lcrypto -lws2_32 -lgdi32 -lcrypt32 -lz   -lgdi32
 SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
-STRIP = /usr/bin/strip
+STRIP = /mnt/mxe/usr/bin/i686-w64-mingw32.static-strip
 VERSION = 0.1
 abs_builddir = /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1
 abs_srcdir = /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1
 abs_top_builddir = /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1
 abs_top_srcdir = /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1
-ac_ct_AR = ar
-ac_ct_CC = gcc
+ac_ct_AR = 
+ac_ct_CC = 
 ac_ct_CC_FOR_BUILD = gcc
 ac_ct_DUMPBIN = 
 am__include = include
@@ -638,11 +638,11 @@ datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
 dvidir = ${docdir}
 exec_prefix = ${prefix}
-host = x86_64-pc-linux-gnu
-host_alias = 
-host_cpu = x86_64
-host_os = linux-gnu
-host_vendor = pc
+host = i686-w64-mingw32.static
+host_alias = i686-w64-mingw32.static
+host_cpu = i686
+host_os = mingw32.static
+host_vendor = w64
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
@@ -1209,13 +1209,13 @@ tests.log: tests$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
-#.test$(EXEEXT).log:
-#	@p='$<'; \
-#	$(am__set_b); \
-#	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
-#	--log-file $$b.log --trs-file $$b.trs \
-#	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
-#	"$$tst" $(AM_TESTS_FD_REDIRECT)
+.test$(EXEEXT).log:
+	@p='$<'; \
+	$(am__set_b); \
+	$(am__check_pre) $(TEST_LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_TEST_LOG_DRIVER_FLAGS) $(TEST_LOG_DRIVER_FLAGS) -- $(TEST_LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 
 distdir: $(DISTFILES)
 	$(am__remove_distdir)

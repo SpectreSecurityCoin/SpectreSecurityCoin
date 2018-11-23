@@ -1,153 +1,144 @@
-src/tests-tests.o: src/tests.c /usr/include/stdc-predef.h \
- src/libsecp256k1-config.h /usr/include/stdio.h /usr/include/features.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h /usr/include/libio.h \
- /usr/include/_G_config.h /usr/include/wchar.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h \
- /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h \
- /usr/include/x86_64-linux-gnu/bits/stdio2.h /usr/include/stdlib.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib.h /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h src/secp256k1.c \
- include/secp256k1.h src/util.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h /usr/include/stdint.h \
- /usr/include/x86_64-linux-gnu/bits/wchar.h src/num_impl.h src/num.h \
- src/num_gmp.h /usr/include/x86_64-linux-gnu/gmp.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h \
- /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h \
- /usr/include/limits.h src/num_gmp_impl.h /usr/include/string.h \
- /usr/include/x86_64-linux-gnu/bits/string.h \
- /usr/include/x86_64-linux-gnu/bits/string2.h /usr/include/endian.h \
- /usr/include/x86_64-linux-gnu/bits/endian.h \
- /usr/include/x86_64-linux-gnu/bits/string3.h src/field_impl.h \
- src/field_5x52_impl.h src/field.h src/field_5x52.h \
- src/field_5x52_asm_impl.h src/scalar_impl.h src/group.h src/scalar.h \
- src/scalar_4x64.h src/scalar_4x64_impl.h src/group_impl.h \
+src/tests-tests.o: src/tests.c src/libsecp256k1-config.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/stdio.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/crtdefs.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_mac.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_secapi.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/vadefs.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/sdks/_mingw_directx.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/sdks/_mingw_ddk.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_print_push.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_off_t.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/swprintf.inl \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/stdio_s.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_print_pop.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/stdlib.h \
+ /mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include-fixed/limits.h \
+ /mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include-fixed/syslimits.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/limits.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/stdlib_s.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/malloc.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/time.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_timeval.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/sys/timeb.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/sys/timeb_s.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/pthread_time.h \
+ src/secp256k1.c include/secp256k1.h \
+ /mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include/stddef.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/stddef.h src/util.h \
+ /mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include/stdint.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/stdint.h src/num_impl.h \
+ src/num.h src/field_impl.h src/field_10x26_impl.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/string.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/string_s.h \
+ src/field.h src/field_10x26.h src/scalar_impl.h src/group.h src/scalar.h \
+ src/scalar_8x32.h src/scalar_8x32_impl.h src/group_impl.h \
  src/ecmult_impl.h src/ecmult.h src/ecmult_const_impl.h \
  src/ecmult_const.h src/ecmult_gen_impl.h src/ecmult_gen.h \
  src/hash_impl.h src/hash.h src/ecmult_static_context.h src/ecdsa_impl.h \
  src/ecdsa.h src/eckey_impl.h src/eckey.h \
  src/modules/recovery/main_impl.h include/secp256k1_recovery.h \
  include/secp256k1.h src/testrand_impl.h src/testrand.h \
- /usr/include/openssl/bn.h /usr/include/openssl/e_os2.h \
- /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
- /usr/include/openssl/ossl_typ.h /usr/include/openssl/crypto.h \
- /usr/include/openssl/stack.h /usr/include/openssl/safestack.h \
- /usr/include/openssl/opensslv.h /usr/include/openssl/symhacks.h \
- /usr/include/openssl/ec.h /usr/include/openssl/asn1.h \
- /usr/include/openssl/bio.h /usr/include/openssl/ecdsa.h \
- /usr/include/openssl/obj_mac.h contrib/lax_der_parsing.c \
- include/secp256k1.h contrib/lax_der_parsing.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/bn.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/e_os2.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/opensslconf.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/ossl_typ.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/crypto.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/stack.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/safestack.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/opensslv.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/symhacks.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/ec.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/asn1.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/bio.h \
+ /mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include/stdarg.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/stdarg.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_stdarg.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/ecdsa.h \
+ /mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/obj_mac.h \
+ contrib/lax_der_parsing.c include/secp256k1.h contrib/lax_der_parsing.h \
  contrib/lax_der_privatekey_parsing.c \
  contrib/lax_der_privatekey_parsing.h src/modules/recovery/tests_impl.h
 
-/usr/include/stdc-predef.h:
-
 src/libsecp256k1-config.h:
 
-/usr/include/stdio.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/stdio.h:
 
-/usr/include/features.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/crtdefs.h:
 
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw.h:
 
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_mac.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_secapi.h:
 
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/vadefs.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stddef.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/sdks/_mingw_directx.h:
 
-/usr/include/x86_64-linux-gnu/bits/types.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/sdks/_mingw_ddk.h:
 
-/usr/include/x86_64-linux-gnu/bits/typesizes.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_print_push.h:
 
-/usr/include/libio.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_off_t.h:
 
-/usr/include/_G_config.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/swprintf.inl:
 
-/usr/include/wchar.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/stdio_s.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stdarg.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_print_pop.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
+/mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include-fixed/limits.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
+/mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include-fixed/syslimits.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/limits.h:
 
-/usr/include/stdlib.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/stdlib_s.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/malloc.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/time.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_timeval.h:
 
-/usr/include/time.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/sys/timeb.h:
 
-/usr/include/x86_64-linux-gnu/bits/time.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/sys/timeb_s.h:
+
+/mnt/mxe/usr/i686-w64-mingw32.static/include/pthread_time.h:
 
 src/secp256k1.c:
 
 include/secp256k1.h:
 
+/mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include/stddef.h:
+
+/mnt/mxe/usr/i686-w64-mingw32.static/include/stddef.h:
+
 src/util.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/5/include/stdint.h:
+/mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include/stdint.h:
 
-/usr/include/stdint.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/stdint.h:
 
 src/num_impl.h:
 
 src/num.h:
 
-src/num_gmp.h:
-
-/usr/include/x86_64-linux-gnu/gmp.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/limits.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed/syslimits.h:
-
-/usr/include/limits.h:
-
-src/num_gmp_impl.h:
-
-/usr/include/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/string.h:
-
-/usr/include/x86_64-linux-gnu/bits/string2.h:
-
-/usr/include/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/x86_64-linux-gnu/bits/string3.h:
-
 src/field_impl.h:
 
-src/field_5x52_impl.h:
+src/field_10x26_impl.h:
+
+/mnt/mxe/usr/i686-w64-mingw32.static/include/string.h:
+
+/mnt/mxe/usr/i686-w64-mingw32.static/include/sec_api/string_s.h:
 
 src/field.h:
 
-src/field_5x52.h:
-
-src/field_5x52_asm_impl.h:
+src/field_10x26.h:
 
 src/scalar_impl.h:
 
@@ -155,9 +146,9 @@ src/group.h:
 
 src/scalar.h:
 
-src/scalar_4x64.h:
+src/scalar_8x32.h:
 
-src/scalar_4x64_impl.h:
+src/scalar_8x32_impl.h:
 
 src/group_impl.h:
 
@@ -197,33 +188,39 @@ src/testrand_impl.h:
 
 src/testrand.h:
 
-/usr/include/openssl/bn.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/bn.h:
 
-/usr/include/openssl/e_os2.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/e_os2.h:
 
-/usr/include/x86_64-linux-gnu/openssl/opensslconf.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/opensslconf.h:
 
-/usr/include/openssl/ossl_typ.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/ossl_typ.h:
 
-/usr/include/openssl/crypto.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/crypto.h:
 
-/usr/include/openssl/stack.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/stack.h:
 
-/usr/include/openssl/safestack.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/safestack.h:
 
-/usr/include/openssl/opensslv.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/opensslv.h:
 
-/usr/include/openssl/symhacks.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/symhacks.h:
 
-/usr/include/openssl/ec.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/ec.h:
 
-/usr/include/openssl/asn1.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/asn1.h:
 
-/usr/include/openssl/bio.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/bio.h:
 
-/usr/include/openssl/ecdsa.h:
+/mnt/mxe/usr/lib/gcc/i686-w64-mingw32.static/5.5.0/include/stdarg.h:
 
-/usr/include/openssl/obj_mac.h:
+/mnt/mxe/usr/i686-w64-mingw32.static/include/stdarg.h:
+
+/mnt/mxe/usr/i686-w64-mingw32.static/include/_mingw_stdarg.h:
+
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/ecdsa.h:
+
+/mnt/mxe/usr/i686-w64-mingw32.static/include/openssl/obj_mac.h:
 
 contrib/lax_der_parsing.c:
 
