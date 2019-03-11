@@ -51,7 +51,7 @@ set<pair<COutPoint, unsigned int> > setStakeSeen;
 CBigNum bnProofOfStakeLimit(~uint256(0) >> 20);
 
 unsigned int nStakeMinAge = 24 * 60 * 60; // 24 hours
-unsigned int nStakeMaxAge = 48 * 24 * 60 * 60; // 48 Days.
+unsigned int nStakeMaxAge = 48 * 24 * 60 * 60 * 2; // 96 Days.
 unsigned int nModifierInterval = 2 * 60; // time to elapse before new modifier is computed
 
 int nCoinbaseMaturity = 90;
@@ -1480,10 +1480,23 @@ int64_t GetProofOfStakeReward(const CBlockIndex* pindexPrev, int64_t nCoinAge, i
 }
     int64_t nSubsidy = 0;
 
-    if (pindexBest->nHeight+1 > 500 && pindexBest->nHeight+1 <= 960000)  {
+    if (pindexBest->nHeight+1 > 500 && pindexBest->nHeight+1 <= 125000)  {
         nSubsidy = 450 * COIN;
     }
-    else if (pindexBest->nHeight+1 > 960000)  {
+    else if (pindexBest->nHeight+1 > 125000 && pindexBest->nHeight+1 <= 350000)  {
+        nSubsidy = 225 * COIN;
+    }
+    else if (pindexBest->nHeight+1 > 350000 && pindexBest->nHeight+1 <= 960000)  {
+        nSubsidy = 100 * COIN;
+    }
+    else if (pindexBest->nHeight+1 > 960000 && pindexBest->nHeight+1 <= 5282500)  {
+        nSubsidy = 50 * COIN;
+    }
+    else if (pindexBest->nHeight+1 > 5282500)  {
+        nSubsidy = 0 * COIN;
+    }
+    else  {
+        //double set because im parinoid
         nSubsidy = 0 * COIN;
     }
 
