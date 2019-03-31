@@ -8,6 +8,7 @@ DEFINES += BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE QT_GUI
 CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += static
+CONFIG += app_bundle
 LDFLAGS=-Wl,--dynamicbase -Wl, --nxcompat -Wl, --large-address-aware -static
 #CONFIG += openssl-linked
 CONFIG += openssl
