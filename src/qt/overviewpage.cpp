@@ -145,6 +145,7 @@ OverviewPage::OverviewPage(QWidget *parent) :
     if(fLiteMode){
         ui->frameDarksend->setVisible(false);
     } else {
+        ui->frameDarksend->setVisible(false);
         if(fMasterNode){
             ui->toggleDarksend->setText("(" + tr("Disabled") + ")");
             ui->darksendAuto->setText("(" + tr("Disabled") + ")");
