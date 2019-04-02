@@ -344,7 +344,7 @@ void OverviewPage::updateDarksendProgress()
         ui->darksendProgress->setToolTip(tr("No inputs detected"));
         // when balance is zero just show info from settings
         strAnonymizeSpectreSecurityCoinAmount = strAnonymizeSpectreSecurityCoinAmount.remove(strAnonymizeSpectreSecurityCoinAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeSpectreSecurityCoinAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
+        strAmountAndRounds = strAnonymizeSpectreSecurityCoinAmount + ' / ' + tr("%n Rounds", "", nDarksendRounds);
 
         ui->labelAmountRounds->setToolTip(tr("No inputs detected"));
         ui->labelAmountRounds->setText(strAmountAndRounds);
@@ -380,7 +380,7 @@ void OverviewPage::updateDarksendProgress()
         ui->labelAmountRounds->setToolTip(tr("Found enough compatible inputs to anonymize %1")
                                           .arg(strAnonymizeSpectreSecurityCoinAmount));
         strAnonymizeSpectreSecurityCoinAmount = strAnonymizeSpectreSecurityCoinAmount.remove(strAnonymizeSpectreSecurityCoinAmount.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
-        strAmountAndRounds = strAnonymizeSpectreSecurityCoinAmount + " / " + tr("%n Rounds", "", nDarksendRounds);
+        strAmountAndRounds = strAnonymizeSpectreSecurityCoinAmount + ' / ' + tr("%n Rounds", "", nDarksendRounds);
     } else {
         QString strMaxToAnonymize = BitcoinUnits::formatHtmlWithUnit(nDisplayUnit, nMaxToAnonymize, false, BitcoinUnits::separatorAlways);
         ui->labelAmountRounds->setToolTip(tr("Not enough compatible inputs to anonymize <span style='color:red;'>%1</span>,<br>"
