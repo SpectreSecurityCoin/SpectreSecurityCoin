@@ -11,8 +11,6 @@ compiler:
 
 install:
     - sudo apt-get update -qq
-    - sudo apt-get upgrade -qq
-    - sudo apt-get dist-upgrade -qq
     - sudo apt-get install g++-multilib libc6-dev-i386 p7zip-full autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip wget xz-utils libtool-bin ruby scons libtool libgdk-pixbuf2.0-dev dos2unix ntp -qq
     - cd /mnt
     - sudo git clone https://github.com/mxe/mxe.git && cd /mnt/mxe/
