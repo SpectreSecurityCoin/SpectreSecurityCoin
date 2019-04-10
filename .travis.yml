@@ -13,7 +13,7 @@ install:
     - sudo apt-get install -qq build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-all-dev software-properties-common
     - sudo add-apt-repository ppa:bitcoin/bitcoin -y
     - sudo apt-get update -qq
-    - sudo apt-get install -qq libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqt4-dev libprotobuf-dev protobuf-compiler
+    - sudo apt-get install -qq qt5 libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqt4-dev libprotobuf-dev protobuf-compiler
     
 script:
     - qmake "USE_DBUS=1" "USE_QRCODE=1" "USE_UPNP=1"
@@ -21,7 +21,6 @@ script:
     - make
     - make check
     - sudo cp SpectreSecurityCoin-qt /usr/bin/SpectreSecurityCoin-qt
-    - sudo cp share/pixmaps/spectresecuritycoin.png /usr/share/pixmaps/spectresecuritycoin-qt.png
     
 branches:
     only:
