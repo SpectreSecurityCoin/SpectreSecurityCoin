@@ -10,16 +10,83 @@ compiler:
   - gcc
 
 install:
-    - sudo apt-get install -qq build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-all-dev software-properties-common
-    - sudo add-apt-repository ppa:bitcoin/bitcoin -y
     - sudo apt-get update -qq
-    - sudo apt-get install -qq qt5 libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler libqt4-dev libprotobuf-dev protobuf-compiler
-    
+    - sudo apt-get upgrade -qq
+    - sudo apt-get dist-upgrade -qq
+    - sudo apt-get install g++-multilib libc6-dev-i386 p7zip-full autoconf automake autopoint bash bison bzip2 cmake flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip wget xz-utils libtool-bin ruby scons libtool libgdk-pixbuf2.0-dev dos2unix ntp -qq
+    - cd /mnt
+    - sudo git clone https://github.com/mxe/mxe.git && cd /mnt/mxe/
+    - sudo make MXE_TARGETS="i686-w64-mingw32.static" qt
+    - sudo make MXE_TARGETS="i686-w64-mingw32.static" qttools
+    - sudo make MXE_TARGETS="i686-w64-mingw32.static" boost
+    - cd /mnt/mxe/src
+    - sudo rm openssl.mk
+    - sudo wget https://raw.githubusercontent.com/SpectreSecurityCoin/Scripts/master/openssl.mk
+    - cd ..
+    - sudo make qt5 miniupnpc db boost -j4 MXE_PLUGIN_DIRS=$PWD/plugins/examples/qt5-freeze
+    - sudo make build-only-openssl_i686-w64-mingw32.static
+    - cd /home/spectre/Desktop
+    - git clone https://github.com/SpectreSecurityCoin/SpectreCoin.git
+    - cd /home/spectre/Desktop/
+    - wget https://github.com/SpectreSecurityCoin/Scripts/raw/master/openssl-1.0.2b.tar.gz
+    - tar -xzvf openssl-1.0.2b.tar.gz
+    - cp -R openssl-1.0.2b openssl-win32-build
+    - make clean
+    - cd openssl-win32-build
+    - export PATH=/mnt/mxe/usr/bin:$PATH
+    - export PATH=$MXEPATH/bin:$PATH
+    - CROSS_COMPILE="i686-w64-mingw32.static-" ./Configure mingw no-asm no-shared --prefix=/mnt/mxe/usr/i686-w64-mingw32.static
+    - sudo make depend
+    - make -j4
+    - mkdir -p /home/spectre/Desktop/SpectreSecurityCoin
+    - cd /home/spectre/Desktop/
+    - wget https://github.com/SpectreSecurityCoin/Scripts/raw/master/db-4.8.30.tar.gz
+    - tar zxvf db-4.8.30.tar.gz
+    - cd /home/spectre/Desktop/db-4.8.30
+    - make clean
+    - wget https://raw.githubusercontent.com/SpectreSecurityCoin/Scripts/master/berekeydb.sh
+    - export PATH=/mnt/mxe/usr/bin:$PATH
+    - export PATH=$MXEPATH/bin:$PATH
+    - dos2unix berekeydb.sh
+    - chmod ugo+x berekeydb.sh
+    - sudo ./berekeydb.sh
+    - cd /home/spectre/Desktop/SpectreSecurityCoin
+    - make clean
+    - cd src/leveldb
+    - dos2unix 
+    - export PATH=/mnt/mxe/usr/bin:$PATH
+    - export PATH=$MXEPATH/bin:$PATH
+    - TARGET_OS=NATIVE_WINDOWS make -j4 CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ libleveldb.a libmemenv.a
+    - cd ../..
+    - chmod 775 * -R
+    - cd src/secp256k1
+    - make clean
+    - export PATH=/mnt/mxe/usr/bin:$PATH
+    - export PATH=$MXEPATH/bin:$PATH
+    - chmod 775 * -R
+    - ./autogen.sh
+    - ./configure --host=i686-w64-mingw32.static --enable-static --disable-shared --enable-module-recovery
+    - make -j4
+    - cd ../..
+    - sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libgmp-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-all-dev -qq
+    - sudo apt-get install software-properties-common
+    - sudo add-apt-repository ppa:bitcoin/bitcoin
+    - sudo apt-get update -qq
+    - sudo apt-get install libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev -qq
+    - sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools -qq
+    - make clean
+    - export PATH=/mnt/mxe/usr/bin:$PATH
+    - export PATH=$MXEPATH/bin:$PATH
+    - qmake linux.pro
+    - make -j4
+
 script:
     - qmake "USE_DBUS=1" "USE_QRCODE=1" "USE_UPNP=1"
-    - sudo chmod -Rv 775 *
-    - make
-    - make check
+    - make clean
+    - export PATH=/mnt/mxe/usr/bin:$PATH
+    - export PATH=$MXEPATH/bin:$PATH
+    - qmake linux.pro
+    - make -j4
     - sudo cp SpectreSecurityCoin-qt /usr/bin/SpectreSecurityCoin-qt
     
 branches:
