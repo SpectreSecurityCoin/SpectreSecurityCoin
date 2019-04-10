@@ -1,17 +1,69 @@
-language: cpp
-sudo: true
+# The test build matrix (stage: test) is constructed to test a wide range of
+# configurations, rather than a single pass/fail. This helps to catch build
+# failures and logic errors that present on platforms other than the ones the
+# author has tested.
+#
+# Some builders use the dependency-generator in `./depends`, rather than using
+# apt-get to install build dependencies. This guarantees that the tester is
+# using the same versions as Gitian, so the build results are nearly identical
+# to what would be found in a final release.
+#
+# In order to avoid rebuilding all dependencies for each build, the binaries
+# are cached and re-used when possible. Changes in the dependency-generator
+# will trigger cache-invalidation and rebuilds as necessary.
+#
+# These caches can be manually removed if necessary. This is one of the very
+# few manual operations that is possible with Travis, and it can be done by a
+# Bitcoin Core GitHub member via the Travis web interface [0].
+#
+# Travis CI uploads the cache after the script phase of the build [1].
+# However, the build is terminated without saving the chache if it takes over
+# 50 minutes [2]. Thus, if we spent too much time in early build stages, fail
+# with an error and save the cache.
+#
+# [0] https://travis-ci.org/bitcoin/bitcoin/caches
+# [1] https://docs.travis-ci.com/user/caching/#build-phases
+# [2] https://docs.travis-ci.com/user/customizing-the-build#build-timeouts
+
 dist: xenial
-
-os:
-    - linux
+os: linux
+language: minimal
+sudo : true
+cache:
+  ccache: true
+  directories:
+    - /mnt/mxe
+    - build
+    - $HOME/.ccache
     
-compiler:
-  - clang
-  - gcc
-
+stages:
+  - lint
+  - test
+  
+env:
+  global:
+    - MAKEJOBS=-j4
+    - RUN_UNIT_TESTS=true
+    - RUN_FUNCTIONAL_TESTS=true
+    - RUN_FUZZ_TESTS=false
+    - DOCKER_NAME_TAG=ubuntu:16.04
+    - BOOST_TEST_RANDOM=1$TRAVIS_BUILD_ID
+    - CCACHE_SIZE=100M
+    - CCACHE_TEMPDIR=/tmp/.ccache-temp
+    - CCACHE_COMPRESS=1
+    - CCACHE_DIR=$HOME/.ccache
+    - BASE_OUTDIR=$TRAVIS_BUILD_DIR/out
+    - WINEDEBUG=fixme-all
+    - DOCKER_PACKAGES="build-essential autotools-dev pkg-config bsdmainutils curl git ca-certificates ccache g++-multilib libc6-dev-i386 p7zip-full autoconf automake autopoint bash bison bzip2 cmake lzip flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip wget xz-utils libtool-bin ruby scons libtool libgdk-pixbuf2.0-dev dos2unix ntp"
+    - CACHE_ERR_MSG="Error! Initial build successful, but not enough time remains to run later build stages and tests. Please manually re-run this job by using the travis restart button or asking a spectresecuritycoin maintainer to restart. The next run should not time out because the build cache has been saved."
+before_install:
+    - sudo apt-get install software-properties-common
+    - sudo add-apt-repository ppa:bitcoin/bitcoin
+    - sudo apt-get update -qq
+    - sudo apt-get install libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev -qq
+    - sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools -qq
 install:
     - sudo apt-get update -qq
-    - sudo apt-get install g++-multilib libc6-dev-i386 p7zip-full autoconf automake autopoint bash bison bzip2 cmake lzip flex gettext git g++ gperf intltool libffi-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl patch perl pkg-config python ruby scons sed unzip wget xz-utils libtool-bin ruby scons libtool libgdk-pixbuf2.0-dev dos2unix ntp -qq
     - cd /mnt
     - sudo git clone https://github.com/mxe/mxe.git && cd /mnt/mxe/
     - sudo make MXE_TARGETS="i686-w64-mingw32.static" qt
@@ -23,8 +75,7 @@ install:
     - cd ..
     - sudo make qt5 miniupnpc db boost -j4 MXE_PLUGIN_DIRS=$PWD/plugins/examples/qt5-freeze
     - sudo make build-only-openssl_i686-w64-mingw32.static
-    - cd /home/spectre/Desktop
-    - git clone https://github.com/SpectreSecurityCoin/SpectreCoin.git
+    - mkdir -p /home/spectre/Desktop
     - cd /home/spectre/Desktop/
     - wget https://github.com/SpectreSecurityCoin/Scripts/raw/master/openssl-1.0.2b.tar.gz
     - tar -xzvf openssl-1.0.2b.tar.gz
@@ -36,7 +87,7 @@ install:
     - CROSS_COMPILE="i686-w64-mingw32.static-" ./Configure mingw no-asm no-shared --prefix=/mnt/mxe/usr/i686-w64-mingw32.static
     - sudo make depend
     - make -j4
-    - mkdir -p /home/spectre/Desktop/SpectreSecurityCoin
+before_script:
     - cd /home/spectre/Desktop/
     - wget https://github.com/SpectreSecurityCoin/Scripts/raw/master/db-4.8.30.tar.gz
     - tar zxvf db-4.8.30.tar.gz
@@ -48,46 +99,33 @@ install:
     - dos2unix berekeydb.sh
     - chmod ugo+x berekeydb.sh
     - sudo ./berekeydb.sh
-    - cd /home/spectre/Desktop/SpectreSecurityCoin
-    - make clean
-    - cd src/leveldb
-    - dos2unix 
-    - export PATH=/mnt/mxe/usr/bin:$PATH
-    - export PATH=$MXEPATH/bin:$PATH
-    - TARGET_OS=NATIVE_WINDOWS make -j4 CC=i686-w64-mingw32.static-gcc CXX=i686-w64-mingw32.static-g++ libleveldb.a libmemenv.a
-    - cd ../..
-    - chmod 775 * -R
-    - cd src/secp256k1
-    - make clean
-    - export PATH=/mnt/mxe/usr/bin:$PATH
-    - export PATH=$MXEPATH/bin:$PATH
-    - chmod 775 * -R
-    - ./autogen.sh
-    - ./configure --host=i686-w64-mingw32.static --enable-static --disable-shared --enable-module-recovery
-    - make -j4
-    - cd ../..
-    - sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libgmp-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-all-dev -qq
-    - sudo apt-get install software-properties-common
-    - sudo add-apt-repository ppa:bitcoin/bitcoin
-    - sudo apt-get update -qq
-    - sudo apt-get install libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev -qq
-    - sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools -qq
-    - make clean
-    - export PATH=/mnt/mxe/usr/bin:$PATH
-    - export PATH=$MXEPATH/bin:$PATH
-    - qmake linux.pro
-    - make -j4
-
 script:
-    - qmake "USE_DBUS=1" "USE_QRCODE=1" "USE_UPNP=1"
-    - make clean
-    - export PATH=/mnt/mxe/usr/bin:$PATH
-    - export PATH=$MXEPATH/bin:$PATH
-    - qmake linux.pro
-    - make -j4
-    - sudo cp SpectreSecurityCoin-qt /usr/bin/SpectreSecurityCoin-qt
-    
-branches:
-    only:
-    - master
- 
+  - export CONTINUE=1
+
+after_script:
+  - echo $TRAVIS_COMMIT_RANGE
+  - echo $TRAVIS_COMMIT_LOG
+jobs:
+  include:
+
+    - stage: lint
+      name: 'lint'
+      env:
+      cache: false
+      language: python
+      python: '3.5' # Oldest supported version according to doc/dependencies.md
+      install:
+       
+      before_script:
+       
+      script:
+      
+    - stage: test
+      name: 'x86_64 Linux  [GOAL: install]  [xenial]  [no depends, only system libs, sanitizers: thread (TSan), no wallet]'
+      env: >-
+        HOST=x86_64-unknown-linux-gnu
+        DOCKER_NAME_TAG=ubuntu:16.04
+        PACKAGES="clang llvm python3-zmq qtbase5-dev qttools5-dev-tools libssl-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev"
+        NO_DEPENDS=1
+        GOAL="install"
+        BITCOIN_CONFIG="--enable-zmq --disable-wallet --with-gui=qt5 CPPFLAGS=-DDEBUG_LOCKORDER --with-sanitizers=thread --disable-hardening --disable-asm CC=clang CXX=clang++"
