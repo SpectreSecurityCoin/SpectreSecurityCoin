@@ -391,7 +391,7 @@ void OverviewPage::updateDarksendProgress()
         strMaxToAnonymize = strMaxToAnonymize.remove(strMaxToAnonymize.indexOf("."), BitcoinUnits::decimals(nDisplayUnit) + 1);
         strAmountAndRounds = "<span style='color:red;'>" +
                 QString(BitcoinUnits::factor(nDisplayUnit) == 1 ? "" : "~") + strMaxToAnonymize +
-                " / " + tr("%n Rounds", "", nDarksendRounds) + "</span>";
+                ' / ' + tr("%n Rounds", "", nDarksendRounds) + "</span>";
     }
     ui->labelAmountRounds->setText(strAmountAndRounds);
 
