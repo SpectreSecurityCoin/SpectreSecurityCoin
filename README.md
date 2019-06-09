@@ -16,7 +16,7 @@ Welcome to the future!
 *	Friendly Masternode Setup
 *	Long-Term Development & Support
 
-## Headless ( Server ) Installation. This is for shops, exhanges, aplication, and programmers.
+### Headless ( Server ) Installation. This is for shops, exhanges, application, and programmers.
 Make sure you have install Ubuntu 16.04 x64. The wallet will not build with Ubuntu 18.04 Bionic Beaver.
 From console type the following commands as root or with sudo.
 
