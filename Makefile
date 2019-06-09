@@ -32,8 +32,8 @@ DEL_DIR       = rmdir
 MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
-DISTNAME      = SpectreSecurityCoin-qt1.0.0.2
-DISTDIR = /home/spectre/Desktop/SpectreSecurityCoin/build/SpectreSecurityCoin-qt1.0.0.2
+DISTNAME      = SpectreSecurityCoin-qt1.0.1.7
+DISTDIR = /home/spectre/Desktop/SpectreSecurityCoin/build/SpectreSecurityCoin-qt1.0.1.7
 LINK          = g++
 LFLAGS        = -m64 -fstack-protector-all --param ssp-buffer-size=1 -Wl,-O1
 LIBS          = $(SUBLIBS) -L/usr/X11R6/lib64 /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/libleveldb.a /home/spectre/Desktop/SpectreSecurityCoin/src/leveldb/libmemenv.a /home/spectre/Desktop/SpectreSecurityCoin/src/secp256k1/src/libsecp256k1_la-secp256k1.o -lminiupnpc -lssl -lcrypto -ldb_cxx -lgmp -lboost_system -lboost_filesystem -lboost_program_options -lboost_thread -lrt -ldl -L/usr/lib/x86_64-linux-gnu -lQt5PrintSupport -lQt5Widgets -lQt5Gui -lQt5Network -lQt5DBus -lQt5Core -lpthread -lGL 
