@@ -24,7 +24,7 @@ From console type the following commands as root or with sudo.
 *	apt -y install software-properties-common
 *	apt-add-repository -y ppa:bitcoin/bitcoin
 *	apt-get update
-*	apt install -y make build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libgmp-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-all-dev  software-properties-common  libdb4.8-dev libdb4.8++-dev  libminiupnpc-dev libzmq3-dev ufw pkg-config libevent-dev  libdb5.3++ unzip libzmq5
+*	apt install -y make build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils libgmp-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-filesystem-dev libboost-chrono-dev libboost-program-options-dev libboost-test-dev libboost-thread-dev libboost-all-dev  software-properties-common libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libzmq3-dev ufw pkg-config libevent-dev libdb5.3++ unzip libzmq5
 
 Once the software is built please use the strip command to remove debugging symbols
 
