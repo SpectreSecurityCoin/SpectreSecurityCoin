@@ -31,7 +31,7 @@ Once the software is built please use the strip command to remove debugging symb
 *	strip SpectreSecurityCoind
 
 ### Masternode Information
-*	Please user script : https://github.com/SpectreSecurityCoin/SpectreSecurityCoinMNInstaller
+*	Please use script : https://github.com/SpectreSecurityCoin/SpectreSecurityCoinMNInstaller
 
 ###### License
 
