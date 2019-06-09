@@ -30,6 +30,9 @@ Once the software is built please use the strip command to remove debugging symb
 
 *	strip SpectreSecurityCoind
 
+### Masternode Information
+*	Please user script : https://github.com/SpectreSecurityCoin/SpectreSecurityCoinMNInstaller
+
 ###### License
 
 SpectreSecurityCoin is released under the terms of the MIT license. See COPYING for more information or see http://opensource.org/licenses/MIT.
