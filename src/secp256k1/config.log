@@ -27,8 +27,6 @@ uname -v = #50~16.04.1-Ubuntu SMP Fri Mar 15 16:06:21 UTC 2019
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /bin
-PATH: /mnt/mxe/usr/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
 PATH: /usr/sbin
