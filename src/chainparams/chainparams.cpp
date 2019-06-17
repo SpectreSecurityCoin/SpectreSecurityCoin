@@ -130,7 +130,7 @@ public:
         getHardcodedSeeds(vFixedSeeds);
 
         nPoolMaxTransactions = 3;
-        strDarksendPoolDummyAddress = "SFoQDUrp63QWqFhjEr3Fmc4ubHRhyzjKUC";
+        strDarksendPoolDummyAddress = "SjZSYBeD55XfRojUjVuB2RcH4JcRKkRXt1";
 
         nLastPOWBlock = 250000;
         nPOSStartBlock = 500;
