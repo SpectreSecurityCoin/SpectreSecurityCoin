@@ -33,7 +33,7 @@ Once the software is built please use the strip command to remove debugging symb
 *	Please use script : https://github.com/SpectreSecurityCoin/SpectreSecurityCoinMNInstaller
 
 ### Troubleshooting 
-Here are some simple steps to help you troubleshoot connections issues
+Here are some simple steps to help you troubleshoot connection issues
 
 *	shut off wallet and remove all blochain folder but wallet.dat and conf
 *	get binary from https://github.com/SpectreSecurityCoin/SpectreSecurityCoin/releases/download/v1.0.1.7-1/SpectreSecurityCoind-Linux.zip or build source
