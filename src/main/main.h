@@ -89,7 +89,18 @@ inline int64_t FutureDrift(int64_t nTime, int nHeight) {
 /** "reject" message codes **/
 static const unsigned char REJECT_INVALID = 0x10;
 
-inline int64_t GetMNCollateral(int nHeight) { return 25000; }
+inline int64_t GetMNCollateral(int nHeight) { 
+	if (nHeight > 1 && nHeight <= 420000) {
+       return 25000; 
+    }
+	else if (nHeight > 420000 && nHeight <= 820000) {
+       return 150000; 
+    }
+    else if (nHeight > 820000) {
+        return 250000; 
+    }
+    
+}
 
 
 
